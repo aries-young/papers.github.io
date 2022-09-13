@@ -1,0 +1,1181 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>VGGNet · 算法笔记</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="aries-yhf">
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-intopic-toc/style.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-flexible-alerts/style.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="【论文】VideoMAE.html" />
+    
+    
+    <link rel="prev" href="【论文】UNITER.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Part Zero. Introduction 
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="【论文】12-in-1.html">
+            
+                <a href="【论文】12-in-1.html">
+            
+                    
+                    12-in-1
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="【论文】Adam.html">
+            
+                <a href="【论文】Adam.html">
+            
+                    
+                    Adam
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="【论文】AlexNet.html">
+            
+                <a href="【论文】AlexNet.html">
+            
+                    
+                    AlexNet
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="【论文】APGN.html">
+            
+                <a href="【论文】APGN.html">
+            
+                    
+                    APGN
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5" data-path="【论文】BatchNorm.html">
+            
+                <a href="【论文】BatchNorm.html">
+            
+                    
+                    BatchNorm
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.6" data-path="【论文】BERT.html">
+            
+                <a href="【论文】BERT.html">
+            
+                    
+                    BERT
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.7" data-path="【论文】Bottom-Up Attention.html">
+            
+                <a href="【论文】Bottom-Up Attention.html">
+            
+                    
+                    Bottom-Up Attention
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.8" data-path="【论文】CLIP-Adapter.html">
+            
+                <a href="【论文】CLIP-Adapter.html">
+            
+                    
+                    CLIP-Adapter
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.9" data-path="【论文】CLIP-ViL.html">
+            
+                <a href="【论文】CLIP-ViL.html">
+            
+                    
+                    CLIP-ViL
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.10" data-path="【论文】CLIP.html">
+            
+                <a href="【论文】CLIP.html">
+            
+                    
+                    CLIP
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.11" data-path="【论文】CLIP2Video.html">
+            
+                <a href="【论文】CLIP2Video.html">
+            
+                    
+                    CLIP2Video
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.12" data-path="【论文】CLIP4Clip.html">
+            
+                <a href="【论文】CLIP4Clip.html">
+            
+                    
+                    CLIP4Clip
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.13" data-path="【论文】CoOP.html">
+            
+                <a href="【论文】CoOP.html">
+            
+                    
+                    CoOP
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.14" data-path="【论文】CP-Net.html">
+            
+                <a href="【论文】CP-Net.html">
+            
+                    
+                    CP-Net
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.15" data-path="【论文】CPT.html">
+            
+                <a href="【论文】CPT.html">
+            
+                    
+                    CPT
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.16" data-path="【论文】DEBUG.html">
+            
+                <a href="【论文】DEBUG.html">
+            
+                    
+                    DEBUG
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.17" data-path="【论文】Decoupled Contrastive Learning.html">
+            
+                <a href="【论文】Decoupled Contrastive Learning.html">
+            
+                    
+                    Decoupled Contrastive Learning
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.18" data-path="【论文】DenseNet.html">
+            
+                <a href="【论文】DenseNet.html">
+            
+                    
+                    DenseNet
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.19" data-path="【论文】DETR.html">
+            
+                <a href="【论文】DETR.html">
+            
+                    
+                    DETR
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.20" data-path="【论文】Fast RCNN.html">
+            
+                <a href="【论文】Fast RCNN.html">
+            
+                    
+                    Fast RCNN
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.21" data-path="【论文】Faster RCNN.html">
+            
+                <a href="【论文】Faster RCNN.html">
+            
+                    
+                    Faster RCNN
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.22" data-path="【论文】FEWVLM.html">
+            
+                <a href="【论文】FEWVLM.html">
+            
+                    
+                    FEWVLM
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.23" data-path="【论文】FitCLIP.html">
+            
+                <a href="【论文】FitCLIP.html">
+            
+                    
+                    FitCLIP
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.24" data-path="【论文】Florence.html">
+            
+                <a href="【论文】Florence.html">
+            
+                    
+                    Florence
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.25" data-path="【论文】Frozen.html">
+            
+                <a href="【论文】Frozen.html">
+            
+                    
+                    Frozen
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.26" data-path="【论文】GAN.html">
+            
+                <a href="【论文】GAN.html">
+            
+                    
+                    GAN
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.27" data-path="【论文】GLIP.html">
+            
+                <a href="【论文】GLIP.html">
+            
+                    
+                    GLIP
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.28" data-path="【论文】GoogleNet Inception V1.html">
+            
+                <a href="【论文】GoogleNet Inception V1.html">
+            
+                    
+                    GoogleNet Inception V1
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.29" data-path="【论文】Group Normalization.html">
+            
+                <a href="【论文】Group Normalization.html">
+            
+                    
+                    Group Normalization
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.30" data-path="【论文】interBERT.html">
+            
+                <a href="【论文】interBERT.html">
+            
+                    
+                    interBERT
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.31" data-path="【论文】LayerNorm.html">
+            
+                <a href="【论文】LayerNorm.html">
+            
+                    
+                    LayerNorm
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.32" data-path="【论文】LocVTP.html">
+            
+                <a href="【论文】LocVTP.html">
+            
+                    
+                    LocVTP
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.33" data-path="【论文】LVTR.html">
+            
+                <a href="【论文】LVTR.html">
+            
+                    
+                    LVTR
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.34" data-path="【论文】LXMERT.html">
+            
+                <a href="【论文】LXMERT.html">
+            
+                    
+                    LXMERT
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.35" data-path="【论文】MAE.html">
+            
+                <a href="【论文】MAE.html">
+            
+                    
+                    MAE
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.36" data-path="【论文】MCAN.html">
+            
+                <a href="【论文】MCAN.html">
+            
+                    
+                    MCAN
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.37" data-path="【论文】MCB.html">
+            
+                <a href="【论文】MCB.html">
+            
+                    
+                    MCB
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.38" data-path="【论文】MLB.html">
+            
+                <a href="【论文】MLB.html">
+            
+                    
+                    MLB
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.39" data-path="【论文】MTTR.html">
+            
+                <a href="【论文】MTTR.html">
+            
+                    
+                    MTTR
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.40" data-path="【论文】Multimodal Transformer.html">
+            
+                <a href="【论文】Multimodal Transformer.html">
+            
+                    
+                    Multimodal Transformer
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.41" data-path="【论文】Oscar.html">
+            
+                <a href="【论文】Oscar.html">
+            
+                    
+                    Oscar
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.42" data-path="【论文】Pixel-BERT.html">
+            
+                <a href="【论文】Pixel-BERT.html">
+            
+                    
+                    Pixel-BERT
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.43" data-path="【论文】Prompting Visual-Language Models for Efficient Video Understanding.html">
+            
+                <a href="【论文】Prompting Visual-Language Models for Efficient Video Understanding.html">
+            
+                    
+                    Prompting Visual-Language Models for Efficient Video Understanding
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.44" data-path="【论文】RCNN.html">
+            
+                <a href="【论文】RCNN.html">
+            
+                    
+                    RCNN
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.45" data-path="【论文】ReLoCLNet.html">
+            
+                <a href="【论文】ReLoCLNet.html">
+            
+                    
+                    ReLoCLNet
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.46" data-path="【论文】ResNet.html">
+            
+                <a href="【论文】ResNet.html">
+            
+                    
+                    ResNet
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.47" data-path="【论文】ROSITA.html">
+            
+                <a href="【论文】ROSITA.html">
+            
+                    
+                    ROSITA
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.48" data-path="【论文】SimMIM.html">
+            
+                <a href="【论文】SimMIM.html">
+            
+                    
+                    SimMIM
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.49" data-path="【论文】simVLM.html">
+            
+                <a href="【论文】simVLM.html">
+            
+                    
+                    simVLM
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.50" data-path="【论文】Tip-Adapter.html">
+            
+                <a href="【论文】Tip-Adapter.html">
+            
+                    
+                    Tip-Adapter
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.51" data-path="【论文】Tips and Tricks for Visual Question Answering_ Learnings from the 2017 Challenge.html">
+            
+                <a href="【论文】Tips and Tricks for Visual Question Answering_ Learnings from the 2017 Challenge.html">
+            
+                    
+                    Tips and Tricks for Visual Question Answering_ Learnings from the 2017 Challenge
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.52" data-path="【论文】Transformer.html">
+            
+                <a href="【论文】Transformer.html">
+            
+                    
+                    Transformer
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.53" data-path="【论文】TSGV 综述.html">
+            
+                <a href="【论文】TSGV 综述.html">
+            
+                    
+                    TSGV 综述
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.54" data-path="【论文】UMT.html">
+            
+                <a href="【论文】UMT.html">
+            
+                    
+                    UMT
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.55" data-path="【论文】Unicoder-VL.html">
+            
+                <a href="【论文】Unicoder-VL.html">
+            
+                    
+                    Unicoder-VL
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.56" data-path="【论文】UNITER.html">
+            
+                <a href="【论文】UNITER.html">
+            
+                    
+                    UNITER
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="2.57" data-path="【论文】VGGNet.html">
+            
+                <a href="【论文】VGGNet.html">
+            
+                    
+                    VGGNet
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.58" data-path="【论文】VideoMAE.html">
+            
+                <a href="【论文】VideoMAE.html">
+            
+                    
+                    VideoMAE
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.59" data-path="【论文】ViLBERT.html">
+            
+                <a href="【论文】ViLBERT.html">
+            
+                    
+                    ViLBERT
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.60" data-path="【论文】VILLA.html">
+            
+                <a href="【论文】VILLA.html">
+            
+                    
+                    VILLA
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.61" data-path="【论文】ViLT.html">
+            
+                <a href="【论文】ViLT.html">
+            
+                    
+                    ViLT
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.62" data-path="【论文】VinVL (Oscar+">
+            
+                <span>
+            
+                    
+                    VinVL (Oscar+)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.63" data-path="【论文】VisualBERT.html">
+            
+                <a href="【论文】VisualBERT.html">
+            
+                    
+                    VisualBERT
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.64" data-path="【论文】ViT.html">
+            
+                <a href="【论文】ViT.html">
+            
+                    
+                    ViT
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.65" data-path="【论文】VL-BERT.html">
+            
+                <a href="【论文】VL-BERT.html">
+            
+                    
+                    VL-BERT
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.66" data-path="【论文】VSLNet.html">
+            
+                <a href="【论文】VSLNet.html">
+            
+                    
+                    VSLNet
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.67" data-path="【论文】VT-T5.html">
+            
+                <a href="【论文】VT-T5.html">
+            
+                    
+                    VT-T5
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.68" data-path="【论文】Where does it exist.html">
+            
+                <a href="【论文】Where does it exist.html">
+            
+                    
+                    Where does it exist
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >VGGNet</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <p>&#xFEFF;<em>*</em>
+&#x3010;&#x8BBA;&#x6587;&#x3011;Simonyan K , Zisserman A . Very Deep Convolutional Networks for Large-Scale Image Recognition[J]. Computer ence, 2014.&#xFF08;<a href="https://arxiv.org/pdf/1409.1556.pdf" target="_blank">pdf</a>&#xFF09;</p>
+<p>&#x3010;&#x65B0;&#x9896;&#x70B9;&#x3011;</p>
+<ul>
+<li>&#x66F4;&#x6DF1;&#x7684;&#x7F51;&#x7EDC;</li>
+<li>&#x4F7F;&#x7528;&#x5C0F;&#x5377;&#x79EF;&#x6838; $3\times3$ &#x548C; $1\times1$ &#x66FF;&#x4EE3;&#x5927;&#x5377;&#x79EF;&#x6838;</li>
+<li>&#x591A;&#x5C3A;&#x5EA6;&#x8BAD;&#x7EC3;&#x53CA;&#x9884;&#x6D4B;</li>
+</ul>
+<hr>
+<h2 id="&#x7F51;&#x7EDC;&#x7ED3;&#x6784;">&#x7F51;&#x7EDC;&#x7ED3;&#x6784;</h2>
+<p>&#x6BD4;&#x8F83;&#x5E38;&#x89C1;&#x7684;&#x4E3A; VGG-16 &#x548C; VGG-19&#xFF0C;VGGNet &#x628A;&#x7F51;&#x7EDC;&#x5206;&#x6210;&#x4E86;  5 &#x6BB5;&#xFF0C;&#x6BCF;&#x6BB5;&#x90FD;&#x5C06;&#x591A;&#x4E2A; $3\times3$ &#x7684;&#x5377;&#x79EF;&#x7F51;&#x7EDC;&#x4E32;&#x8054;&#x5728;&#x4E00;&#x8D77;&#xFF0C;&#x6BCF;&#x6BB5;&#x5377;&#x79EF;&#x540E;&#x9762;&#x63A5;&#x4E00;&#x4E2A;&#x6700;&#x5927;&#x6C60;&#x5316;&#x5C42;&#xFF0C;&#x6700;&#x540E;&#x9762;&#x662F; 3 &#x4E2A;&#x5168;&#x8FDE;&#x63A5;&#x5C42;&#x548C;&#x4E00;&#x4E2A; softmax &#x5C42;</p>
+<p><img src="https://img-blog.csdnimg.cn/76b2404b68d44712898a0481472c421a.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA5aSn55m9576KX0FyaWVz,size_20,color_FFFFFF,t_70,g_se,x_16" alt="&#x5728;&#x8FD9;&#x91CC;&#x63D2;&#x5165;&#x56FE;&#x7247;&#x63CF;&#x8FF0;"></p>
+<h2 id="&#x52A0;&#x6DF1;&#x6BD4;&#x52A0;&#x5BBD;&#x66F4;&#x597D;">&#x52A0;&#x6DF1;&#x6BD4;&#x52A0;&#x5BBD;&#x66F4;&#x597D;</h2>
+<p>&#x5982;&#x679C;&#x8981;&#x589E;&#x5927;&#x611F;&#x53D7;&#x91CE;&#xFF0C;&#x4E00;&#x822C;&#x7684;&#x601D;&#x8DEF;&#x662F;&#x76F4;&#x63A5;&#x589E;&#x52A0;&#x5377;&#x79EF;&#x6838;&#x7684;&#x5927;&#x5C0F;&#xFF0C;&#x4F46;&#x662F;&#x8FD9;&#x76F4;&#x63A5;&#x589E;&#x52A0;&#x4E86;&#x53C2;&#x6570;&#x7684;&#x6570;&#x91CF;&#xFF0C;&#x5047;&#x8BBE;&#x6709; $C$ &#x4E2A; $7\times7$ &#x7684;&#x5377;&#x79EF;&#x6838;&#xFF0C;&#x5176;&#x53C2;&#x6570;&#x91CF;&#x4E3A; $7C\times7C=49C^2$&#x3002;&#x4F5C;&#x8005;&#x8BA4;&#x4E3A;&#x7528;&#x5C0F;&#x7684;&#x5377;&#x79EF;&#x6838;&#x4E32;&#x8054;&#x4E0D;&#x4EC5;&#x80FD;&#x8D77;&#x5230;&#x589E;&#x5927;&#x611F;&#x53D7;&#x91CE;&#x7684;&#x4F5C;&#x7528;&#xFF0C;&#x800C;&#x4E14;&#x80FD;&#x591F;&#x51CF;&#x5C0F;&#x53C2;&#x6570;&#x6570;&#x91CF;&#xFF0C;&#x4F8B;&#x5982;&#xFF0C;&#x8FD9;&#x91CC;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x7528; $3$ &#x4E2A; $3\times3$ &#x7684;&#x5377;&#x79EF;&#x6838;&#x4E32;&#x8054;&#x540C;&#x6837;&#x80FD;&#x8FBE;&#x5230; $7\times7$ &#x7684;&#x611F;&#x53D7;&#x91CE;&#xFF0C;&#x4F46;&#x53C2;&#x6570;&#x91CF;&#x5374;&#x53EA;&#x6709; $3\times3C\times3C=27C^2$</p>
+<p>&#x81F3;&#x4E8E;&#x4E3A;&#x4EC0;&#x4E48;&#x4E09;&#x4E2A; $3\times3$ &#x7684;&#x5377;&#x79EF;&#x6838;&#x4E32;&#x8054;&#x7684;&#x611F;&#x53D7;&#x91CE;&#x7B49;&#x540C;&#x4E8E;&#x4E00;&#x4E2A; $7\times7$ &#x7684;&#x5377;&#x79EF;&#x6838;&#xFF0C;&#x6216;&#x8005;&#x4E24;&#x4E2A; $3\times3$ &#x7684;&#x5377;&#x79EF;&#x6838;&#x4E32;&#x8054;&#x7684;&#x611F;&#x53D7;&#x7B49;&#x540C;&#x4E8E;&#x4E00;&#x4E2A; $5\times5$ &#x7684;&#x5377;&#x79EF;&#x6838;&#x7B80;&#x5355;&#x753B;&#x4E2A;&#x8349;&#x56FE;&#x5C31;&#x80FD;&#x5F88;&#x5BB9;&#x6613;&#x660E;&#x767D;</p>
+<p><img src="https://img-blog.csdnimg.cn/d5d97eabab2342d99d0e67db48ac025d.png?x-oss-process=image,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA5aSn55m9576KX0FyaWVz,size_12,color_FFFFFF,t_70,g_se,x_16#pic_center" alt="&#x5728;&#x8FD9;&#x91CC;&#x63D2;&#x5165;&#x56FE;&#x7247;&#x63CF;&#x8FF0;"></p>
+<p>&#x53E6;&#x5916;&#xFF0C;&#x8BBA;&#x6587;&#x4E2D;&#x4F5C;&#x8005;&#x4E5F;&#x4E3B;&#x5F20;&#x4F7F;&#x7528; $1\times1$ &#x7684;&#x5377;&#x79EF;&#x6838;&#x6765;&#x589E;&#x52A0;&#x7EBF;&#x6027;&#x6362;&#xFF0C;&#x8FD9;&#x79CD;&#x65B9;&#x5F0F;&#x5728;&#x4FDD;&#x6301;&#x7A7A;&#x95F4;&#x7EF4;&#x5EA6;&#x4E0D;&#x53D8;&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x589E;&#x52A0;&#x4E86;&#x51B3;&#x7B56;&#x51FD;&#x6570;&#x7684;&#x975E;&#x7EBF;&#x6027;&#x6027;</p>
+<h2 id="&#x591A;&#x5C3A;&#x5EA6;&#x8BAD;&#x7EC3;">&#x591A;&#x5C3A;&#x5EA6;&#x8BAD;&#x7EC3;</h2>
+<p>VGGNet &#x4F7F;&#x7528;&#x4E86; Multi-Scale &#x7684;&#x65B9;&#x6CD5;&#x589E;&#x5F3A;&#x6570;&#x636E;&#x2014;&#x2014;&#x5C06;&#x539F;&#x59CB;&#x56FE;&#x50CF;&#x7F29;&#x653E;&#x5230;&#x4E0D;&#x540C;&#x5C3A;&#x5BF8; $S$&#xFF0C;&#x7136;&#x540E;&#x5728;&#x968F;&#x673A;&#x526A;&#x88C1;&#x6210; 224 x 224 &#x7684;&#x56FE;&#x7247;&#xFF0C;&#x8FD9;&#x6837;&#x53EF;&#x4EE5;&#x589E;&#x52A0;&#x6570;&#x636E;&#x91CF;&#x3002;&#x4F5C;&#x8005;&#x8BBE;&#x7F6E; $S$ &#x5728; $[256, 512]$ &#x8FD9;&#x4E2A;&#x533A;&#x95F4;&#x5185;&#x53D6;&#x503C;&#xFF0C;&#x4F7F;&#x7528; Multi-Scale &#x83B7;&#x5F97;&#x591A;&#x4E2A;&#x7248;&#x672C;&#x7684;&#x6570;&#x636E;&#xFF0C;&#x5E76;&#x5C06;&#x8FD9;&#x4E9B;&#x6570;&#x636E;&#x5408;&#x5728;&#x4E00;&#x8D77;&#x8BAD;&#x7EC3;</p>
+<h2 id="&#x5176;&#x4ED6;&#x6539;&#x8FDB;&#x70B9;">&#x5176;&#x4ED6;&#x6539;&#x8FDB;&#x70B9;</h2>
+<ul>
+<li>&#x8BC1;&#x660E; LRN &#x6548;&#x679C;&#x4E0D;&#x5927;</li>
+<li>&#x8BAD;&#x7EC3;&#x65F6;&#xFF0C;&#x5148;&#x8BAD;&#x7EC3;&#x7EA7;&#x522B;&#x7B80;&#x5355;&#x7684; VGGNet&#xFF0C;&#x4F8B;&#x5982;&#x4E0A;&#x8868;&#x4E2D;&#x7684; A &#x7F51;&#x7EDC;&#xFF0C;&#x7136;&#x540E;&#x518D;&#x4F7F;&#x7528; A &#x7F51;&#x7EDC;&#x7684;&#x6743;&#x91CD;&#x6765;&#x521D;&#x59CB;&#x5316;&#x540E;&#x9762;&#x7684;&#x590D;&#x6742;&#x6A21;&#x578B;&#xFF0C;&#x52A0;&#x5FEB;&#x8BAD;&#x7EC3;&#x901F;&#x5EA6;</li>
+<li>&#x76F8;&#x8F83;&#x4E8E; AlexNet&#xFF0C;&#x4F7F;&#x7528;&#x4E86; $2\times2$ &#x7684;&#x6C60;&#x5316;&#x6838;&#xFF0C;&#x83B7;&#x53D6;&#x66F4;&#x591A;&#x7684;&#x7EC6;&#x8282;&#x4FE1;&#x606F;</li>
+</ul>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="【论文】UNITER.html" class="navigation navigation-prev " aria-label="Previous page: UNITER">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="【论文】VideoMAE.html" class="navigation navigation-next " aria-label="Next page: VideoMAE">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"VGGNet","level":"2.57","depth":1,"next":{"title":"VideoMAE","level":"2.58","depth":1,"path":"【论文】VideoMAE.md","ref":"【论文】VideoMAE.md","articles":[]},"previous":{"title":"UNITER","level":"2.56","depth":1,"path":"【论文】UNITER.md","ref":"【论文】UNITER.md","articles":[]},"dir":"ltr"},"config":{"plugins":["intopic-toc","expandable-chapters","copy-code-button","flexible-alerts","-lunr","-search","search-pro","mathjax-pro"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"intopic-toc":{"isCollapsed":true,"isScrollspyActive":true,"label":"目录","maxDepth":6,"mode":"nested","selector":".markdown-section h1, .markdown-section h2, .markdown-section h3, .markdown-section h4, .markdown-section h5, .markdown-section h6","visible":true},"search-pro":{},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"mathjax-pro":{"forceSVG":false,"version":"2.7.7"},"flexible-alerts":{"danger":{"className":"danger","icon":"fa fa-ban","label":"CORE CONTENT"},"note":{"className":"info","icon":"fa fa-info-circle","label":"NOTE"},"style":"callout","tip":{"className":"tip","icon":"fa fa-lightbulb-o","label":"TIPS"},"warning":{"className":"warning","icon":"fa fa-exclamation-triangle","label":"SUPPLEMENT"}},"copy-code-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"langaue":"zh-hans","theme":"default","author":"aries-yhf","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"算法笔记","gitbook":"*","description":"算法"},"file":{"path":"【论文】VGGNet.md","mtime":"2021-10-07T07:38:55.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-09-13T12:21:53.440Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-intopic-toc/anchor.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-intopic-toc/gumshoe.polyfills.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-intopic-toc/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-copy-code-button/toggle.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-flexible-alerts/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-mathjax-pro/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

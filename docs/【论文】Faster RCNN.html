@@ -1,0 +1,1327 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Faster RCNN · 算法笔记</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="aries-yhf">
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-intopic-toc/style.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-flexible-alerts/style.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="【论文】FEWVLM.html" />
+    
+    
+    <link rel="prev" href="【论文】Fast RCNN.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Part Zero. Introduction 
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="【论文】12-in-1.html">
+            
+                <a href="【论文】12-in-1.html">
+            
+                    
+                    12-in-1
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="【论文】Adam.html">
+            
+                <a href="【论文】Adam.html">
+            
+                    
+                    Adam
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="【论文】AlexNet.html">
+            
+                <a href="【论文】AlexNet.html">
+            
+                    
+                    AlexNet
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="【论文】APGN.html">
+            
+                <a href="【论文】APGN.html">
+            
+                    
+                    APGN
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5" data-path="【论文】BatchNorm.html">
+            
+                <a href="【论文】BatchNorm.html">
+            
+                    
+                    BatchNorm
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.6" data-path="【论文】BERT.html">
+            
+                <a href="【论文】BERT.html">
+            
+                    
+                    BERT
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.7" data-path="【论文】Bottom-Up Attention.html">
+            
+                <a href="【论文】Bottom-Up Attention.html">
+            
+                    
+                    Bottom-Up Attention
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.8" data-path="【论文】CLIP-Adapter.html">
+            
+                <a href="【论文】CLIP-Adapter.html">
+            
+                    
+                    CLIP-Adapter
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.9" data-path="【论文】CLIP-ViL.html">
+            
+                <a href="【论文】CLIP-ViL.html">
+            
+                    
+                    CLIP-ViL
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.10" data-path="【论文】CLIP.html">
+            
+                <a href="【论文】CLIP.html">
+            
+                    
+                    CLIP
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.11" data-path="【论文】CLIP2Video.html">
+            
+                <a href="【论文】CLIP2Video.html">
+            
+                    
+                    CLIP2Video
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.12" data-path="【论文】CLIP4Clip.html">
+            
+                <a href="【论文】CLIP4Clip.html">
+            
+                    
+                    CLIP4Clip
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.13" data-path="【论文】CoOP.html">
+            
+                <a href="【论文】CoOP.html">
+            
+                    
+                    CoOP
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.14" data-path="【论文】CP-Net.html">
+            
+                <a href="【论文】CP-Net.html">
+            
+                    
+                    CP-Net
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.15" data-path="【论文】CPT.html">
+            
+                <a href="【论文】CPT.html">
+            
+                    
+                    CPT
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.16" data-path="【论文】DEBUG.html">
+            
+                <a href="【论文】DEBUG.html">
+            
+                    
+                    DEBUG
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.17" data-path="【论文】Decoupled Contrastive Learning.html">
+            
+                <a href="【论文】Decoupled Contrastive Learning.html">
+            
+                    
+                    Decoupled Contrastive Learning
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.18" data-path="【论文】DenseNet.html">
+            
+                <a href="【论文】DenseNet.html">
+            
+                    
+                    DenseNet
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.19" data-path="【论文】DETR.html">
+            
+                <a href="【论文】DETR.html">
+            
+                    
+                    DETR
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.20" data-path="【论文】Fast RCNN.html">
+            
+                <a href="【论文】Fast RCNN.html">
+            
+                    
+                    Fast RCNN
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="2.21" data-path="【论文】Faster RCNN.html">
+            
+                <a href="【论文】Faster RCNN.html">
+            
+                    
+                    Faster RCNN
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.22" data-path="【论文】FEWVLM.html">
+            
+                <a href="【论文】FEWVLM.html">
+            
+                    
+                    FEWVLM
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.23" data-path="【论文】FitCLIP.html">
+            
+                <a href="【论文】FitCLIP.html">
+            
+                    
+                    FitCLIP
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.24" data-path="【论文】Florence.html">
+            
+                <a href="【论文】Florence.html">
+            
+                    
+                    Florence
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.25" data-path="【论文】Frozen.html">
+            
+                <a href="【论文】Frozen.html">
+            
+                    
+                    Frozen
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.26" data-path="【论文】GAN.html">
+            
+                <a href="【论文】GAN.html">
+            
+                    
+                    GAN
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.27" data-path="【论文】GLIP.html">
+            
+                <a href="【论文】GLIP.html">
+            
+                    
+                    GLIP
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.28" data-path="【论文】GoogleNet Inception V1.html">
+            
+                <a href="【论文】GoogleNet Inception V1.html">
+            
+                    
+                    GoogleNet Inception V1
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.29" data-path="【论文】Group Normalization.html">
+            
+                <a href="【论文】Group Normalization.html">
+            
+                    
+                    Group Normalization
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.30" data-path="【论文】interBERT.html">
+            
+                <a href="【论文】interBERT.html">
+            
+                    
+                    interBERT
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.31" data-path="【论文】LayerNorm.html">
+            
+                <a href="【论文】LayerNorm.html">
+            
+                    
+                    LayerNorm
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.32" data-path="【论文】LocVTP.html">
+            
+                <a href="【论文】LocVTP.html">
+            
+                    
+                    LocVTP
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.33" data-path="【论文】LVTR.html">
+            
+                <a href="【论文】LVTR.html">
+            
+                    
+                    LVTR
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.34" data-path="【论文】LXMERT.html">
+            
+                <a href="【论文】LXMERT.html">
+            
+                    
+                    LXMERT
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.35" data-path="【论文】MAE.html">
+            
+                <a href="【论文】MAE.html">
+            
+                    
+                    MAE
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.36" data-path="【论文】MCAN.html">
+            
+                <a href="【论文】MCAN.html">
+            
+                    
+                    MCAN
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.37" data-path="【论文】MCB.html">
+            
+                <a href="【论文】MCB.html">
+            
+                    
+                    MCB
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.38" data-path="【论文】MLB.html">
+            
+                <a href="【论文】MLB.html">
+            
+                    
+                    MLB
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.39" data-path="【论文】MTTR.html">
+            
+                <a href="【论文】MTTR.html">
+            
+                    
+                    MTTR
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.40" data-path="【论文】Multimodal Transformer.html">
+            
+                <a href="【论文】Multimodal Transformer.html">
+            
+                    
+                    Multimodal Transformer
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.41" data-path="【论文】Oscar.html">
+            
+                <a href="【论文】Oscar.html">
+            
+                    
+                    Oscar
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.42" data-path="【论文】Pixel-BERT.html">
+            
+                <a href="【论文】Pixel-BERT.html">
+            
+                    
+                    Pixel-BERT
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.43" data-path="【论文】Prompting Visual-Language Models for Efficient Video Understanding.html">
+            
+                <a href="【论文】Prompting Visual-Language Models for Efficient Video Understanding.html">
+            
+                    
+                    Prompting Visual-Language Models for Efficient Video Understanding
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.44" data-path="【论文】RCNN.html">
+            
+                <a href="【论文】RCNN.html">
+            
+                    
+                    RCNN
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.45" data-path="【论文】ReLoCLNet.html">
+            
+                <a href="【论文】ReLoCLNet.html">
+            
+                    
+                    ReLoCLNet
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.46" data-path="【论文】ResNet.html">
+            
+                <a href="【论文】ResNet.html">
+            
+                    
+                    ResNet
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.47" data-path="【论文】ROSITA.html">
+            
+                <a href="【论文】ROSITA.html">
+            
+                    
+                    ROSITA
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.48" data-path="【论文】SimMIM.html">
+            
+                <a href="【论文】SimMIM.html">
+            
+                    
+                    SimMIM
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.49" data-path="【论文】simVLM.html">
+            
+                <a href="【论文】simVLM.html">
+            
+                    
+                    simVLM
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.50" data-path="【论文】Tip-Adapter.html">
+            
+                <a href="【论文】Tip-Adapter.html">
+            
+                    
+                    Tip-Adapter
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.51" data-path="【论文】Tips and Tricks for Visual Question Answering_ Learnings from the 2017 Challenge.html">
+            
+                <a href="【论文】Tips and Tricks for Visual Question Answering_ Learnings from the 2017 Challenge.html">
+            
+                    
+                    Tips and Tricks for Visual Question Answering_ Learnings from the 2017 Challenge
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.52" data-path="【论文】Transformer.html">
+            
+                <a href="【论文】Transformer.html">
+            
+                    
+                    Transformer
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.53" data-path="【论文】TSGV 综述.html">
+            
+                <a href="【论文】TSGV 综述.html">
+            
+                    
+                    TSGV 综述
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.54" data-path="【论文】UMT.html">
+            
+                <a href="【论文】UMT.html">
+            
+                    
+                    UMT
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.55" data-path="【论文】Unicoder-VL.html">
+            
+                <a href="【论文】Unicoder-VL.html">
+            
+                    
+                    Unicoder-VL
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.56" data-path="【论文】UNITER.html">
+            
+                <a href="【论文】UNITER.html">
+            
+                    
+                    UNITER
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.57" data-path="【论文】VGGNet.html">
+            
+                <a href="【论文】VGGNet.html">
+            
+                    
+                    VGGNet
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.58" data-path="【论文】VideoMAE.html">
+            
+                <a href="【论文】VideoMAE.html">
+            
+                    
+                    VideoMAE
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.59" data-path="【论文】ViLBERT.html">
+            
+                <a href="【论文】ViLBERT.html">
+            
+                    
+                    ViLBERT
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.60" data-path="【论文】VILLA.html">
+            
+                <a href="【论文】VILLA.html">
+            
+                    
+                    VILLA
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.61" data-path="【论文】ViLT.html">
+            
+                <a href="【论文】ViLT.html">
+            
+                    
+                    ViLT
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.62" data-path="【论文】VinVL (Oscar+">
+            
+                <span>
+            
+                    
+                    VinVL (Oscar+)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.63" data-path="【论文】VisualBERT.html">
+            
+                <a href="【论文】VisualBERT.html">
+            
+                    
+                    VisualBERT
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.64" data-path="【论文】ViT.html">
+            
+                <a href="【论文】ViT.html">
+            
+                    
+                    ViT
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.65" data-path="【论文】VL-BERT.html">
+            
+                <a href="【论文】VL-BERT.html">
+            
+                    
+                    VL-BERT
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.66" data-path="【论文】VSLNet.html">
+            
+                <a href="【论文】VSLNet.html">
+            
+                    
+                    VSLNet
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.67" data-path="【论文】VT-T5.html">
+            
+                <a href="【论文】VT-T5.html">
+            
+                    
+                    VT-T5
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.68" data-path="【论文】Where does it exist.html">
+            
+                <a href="【论文】Where does it exist.html">
+            
+                    
+                    Where does it exist
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >Faster RCNN</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <p>&#xFEFF;<em>*</em>
+&#x3010;&#x8BBA;&#x6587;&#x3011;Shaoqing Ren, Kaiming He, Ross Girshick, Jian Sun. Faster R-CNN: Towards Real-Time Object Detection with Region Proposal Networks.&#xFF08;<a href="https://arxiv.org/pdf/1506.01497.pdf" target="_blank">pdf</a>&#xFF09;</p>
+<hr>
+<h2 id="&#x6574;&#x4F53;&#x6846;&#x67B6;">&#x6574;&#x4F53;&#x6846;&#x67B6;</h2>
+<p>Faster RCNN &#x53EF;&#x4EE5;&#x5206;&#x4E3A; 4 &#x4E2A;&#x5927;&#x6A21;&#x5757;;</p>
+<ul>
+<li><p><strong>Conv Layers</strong></p>
+<p>&#x7528;&#x4E8E;&#x56FE;&#x7247;&#x7684;&#x7279;&#x5F81;&#x63D0;&#x53D6;&#xFF0C;&#x7ECF;&#x8FC7;&#x4E00;&#x7CFB;&#x5217;&#x7684; conv + relu + pooling &#x7684;&#x7279;&#x5F81;&#x6620;&#x5C04;</p>
+</li>
+<li><p><strong>Region Proposal Networks</strong></p>
+<p>&#x7528;&#x4E8E;&#x63A8;&#x8350;&#x5019;&#x9009;&#x533A;&#x57DF;&#xFF0C;&#x66FF;&#x4EE3;&#x4E4B;&#x524D;&#x5728; RCNN &#x6216; Fast RCNN &#x4E2D;&#x7684; search selective&#xFF0C;&#x901A;&#x8FC7; softmax &#x5224;&#x65AD; anchor &#x5C5E;&#x4E8E;&#x6B63;&#x6837;&#x672C;&#x8FD8;&#x662F;&#x8D1F;&#x6837;&#x672C;&#xFF0C;&#x7136;&#x540E;&#x5229;&#x7528; bbox regression &#x4FEE;&#x6B63; anchor &#x83B7;&#x5F97;&#x7CBE;&#x786E;&#x7684; proposal</p>
+</li>
+<li><p><strong>RoI Pooling</strong></p>
+<p>&#x548C; Fast RCNN &#x4E00;&#x6837;&#xFF0C;&#x5C06;&#x4E0D;&#x540C;&#x5927;&#x5C0F;&#x5F62;&#x72B6;&#x7684; proposal &#x8F6C;&#x6362;&#x4E3A;&#x56FA;&#x5B9A;&#x5927;&#x5C0F;&#x7684;&#x8F93;&#x51FA; proposal feature</p>
+</li>
+<li><p><strong>Classification</strong></p>
+<p>&#x5229;&#x7528; proposal feature &#x8BA1;&#x7B97; proposal &#x7684;&#x7C7B;&#x522B;&#xFF0C;&#x540C;&#x65F6;&#x518D;&#x6B21;&#x4F7F;&#x7528; bbox regression &#x83B7;&#x5F97;&#x52A0;&#x6D4B;&#x6846;&#x7684;&#x6700;&#x7EC8;&#x7CBE;&#x786E;&#x4F4D;&#x7F6E;</p>
+</li>
+</ul>
+<div align="center"><img src="https://img-blog.csdnimg.cn/126a96662447401683f2816cc07c818d.png?x-oss-process=image,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA5aSn55m9576KX0FyaWVz,size_15,color_FFFFFF,t_70,g_se,x_16"></div>
+
+<p>&#x4E0B;&#x9762;&#x5C55;&#x793A;&#x4E86; Faster RCNN &#x7684;&#x7EC6;&#x8282;&#x5904;&#x7406;&#xFF0C;&#x5047;&#x8BBE;&#x8F93;&#x5165;&#x4E00;&#x5F20;&#x4EFB;&#x610F;&#x5927;&#x5C0F;&#x7684;&#x56FE;&#x7247; $P\times Q$</p>
+<ul>
+<li>&#x9996;&#x5148;&#xFF0C;&#x7F29;&#x653E;&#x81F3;&#x56FA;&#x5B9A;&#x5927;&#x5C0F; $M\times N$&#xFF0C;&#x7136;&#x540E;&#x518D;&#x5C06;&#x56FE;&#x7247;&#x9001;&#x5165;&#x7F51;&#x7EDC;</li>
+<li>Conv Layers &#x5305;&#x542B;&#x4E86; 13 &#x4E2A;&#x5377;&#x79EF;&#x5C42;&#xFF08;kernel_size = 3, padding = 1, stride = 1&#xFF09; + 13 &#x4E2A; ReLU + 4 &#x4E2A; &#x6C60;&#x5316;&#x5C42;&#xFF08;kernel_size = 2, padding = 0, stride = 2&#xFF09;</li>
+<li>RPN &#x9996;&#x5148;&#x7ECF;&#x8FC7; $3\times3$ &#x7684;&#x5377;&#x79EF;&#xFF0C;&#x5206;&#x522B;&#x751F;&#x6210; positive anchor &#x548C;&#x5BF9;&#x5E94;&#x7684; bbox regression&#xFF0C;&#x7136;&#x540E;&#x8BA1;&#x7B97;&#x51FA;&#x9700;&#x8981;&#x7684; proposal</li>
+<li>RoI Pooling &#x5219;&#x5229;&#x7528; proposal &#x5BF9;&#x5E94; feature map &#x5F97;&#x5230; proposal feature&#xFF0C;&#x540E;&#x7EED;&#x9001;&#x5165;&#x5168;&#x8FDE;&#x63A5;&#x7F51;&#x7EDC;&#x901A;&#x8FC7; softmax &#x505A;&#x5206;&#x7C7B;</li>
+</ul>
+<div align="center"><img src="https://pic4.zhimg.com/80/v2-e64a99b38f411c337f538eb5f093bdf3_1440w.jpg"></div>
+
+<h2 id="conv-layers">Conv Layers</h2>
+<p>Faster RCNN &#x4E2D;&#x5BF9;&#x6240;&#x6709;&#x5377;&#x79EF;&#x90FD;&#x8FDB;&#x884C;&#x4E86; padding &#x5904;&#x7406;&#xFF08;padding = 1&#xFF09;&#xFF0C;&#x4E8E;&#x662F;&#x7ECF;&#x8FC7; $3\times3$ &#x7684;&#x5377;&#x79EF;&#x540E;&#x8F93;&#x51FA;&#x56FE;&#x7684;&#x5927;&#x5C0F;&#x5E76;&#x4E0D;&#x53D1;&#x751F;&#x6539;&#x53D8;&#xFF08;&#x7ECF;&#x8FC7;&#x5377;&#x79EF;&#x540E; $(M-3+2\times1)/1+1=M$&#xFF09;</p>
+<p>&#x8FD9;&#x6837;&#x7684;&#x597D;&#x5904;&#x662F;&#xFF0C;&#x6BCF;&#x6B21;&#x7ECF;&#x8FC7;&#x6C60;&#x5316;&#x5C42;&#x56FE;&#x7247;&#x5927;&#x5C0F;&#x7F29;&#x5C0F;&#x4E3A;&#x539F;&#x6765;&#x7684;&#x4E00;&#x534A;&#xFF0C;&#x5373; $\frac{M}{2}\times\frac{N}{2}$&#xFF0C;&#x800C;&#x5377;&#x79EF;&#x548C; relu &#x4E0D;&#x6539;&#x53D8;&#x56FE;&#x7247;&#x5927;&#x5C0F;&#xFF0C;&#x4E8E;&#x662F;&#x5728;&#x7ECF;&#x8FC7; Conv Layers &#x540E;&#xFF0C;&#x56FE;&#x7247;&#x53D8;&#x4E3A; $\frac{M}{16}\times\frac{N}{16}$&#xFF0C;&#x8FD9;&#x6837;&#x5728; RoI Pooling &#x65F6;&#x5C06;&#x975E;&#x5E38;&#x5BB9;&#x6613;&#x5BF9;&#x9F50;</p>
+<h2 id="anchor-generation-layer">Anchor Generation Layer</h2>
+<p>Fast RCNN &#x4E2D;&#x4F1A;&#x53CD;&#x590D;&#x63D0;&#x5230;&#x4E00;&#x4E2A;&#x6982;&#x5FF5;&#x2014;&#x2014;anchor&#xFF0C;&#x6240;&#x8C13; anchor &#x5176;&#x5B9E;&#x5C31;&#x662F;&#x4E00;&#x7EC4;&#x77E9;&#x5F62;&#x6846;&#xFF0C;9 &#x4E2A;&#x77E9;&#x5F62;&#x6709; 3 &#x79CD;&#x5F62;&#x72B6;&#xFF0C;&#x957F;&#x5BBD;&#x6BD4;&#x5927;&#x7EA6;&#x4E3A; $1:1<script type="math/tex; ">、</script>1:2$ &#x548C; $2:1$&#xFF0C;&#x5B9E;&#x9645;&#x4E0A;&#x901A;&#x8FC7;&#x5173; anchor &#x5C31;&#x5F15;&#x5165;&#x4E86;&#x68C0;&#x6D4B;&#x4E2D;&#x5E38;&#x7528;&#x7684;&#x591A;&#x5C3A;&#x5EA6;&#x65B9;&#x6CD5;</p>
+<div align="center"><img src="https://pic4.zhimg.com/80/v2-7abead97efcc46a3ee5b030a2151643f_1440w.jpg"></div>
+
+<p>&#x5728; Conv Layers &#x8F93;&#x51FA;&#x7684; feature map &#x7684;&#x6BCF;&#x4E2A;&#x70B9;&#x90FD;&#x914D;&#x5907;&#x8FD9; 9 &#x4E2A; anchor &#x4F5C;&#x4E3A;&#x521D;&#x59CB;&#x7684;&#x68C0;&#x6D4B;&#x6846;&#xFF0C;&#x8FD9;&#x6837;&#x83B7;&#x5F97;&#x7684;&#x68C0;&#x6D4B;&#x6846;&#x5B58;&#x5728;&#x4E0D;&#x51C6;&#x786E;&#x7684;&#x95EE;&#x9898;&#x4E5F;&#x4E0D;&#x7528;&#x592A;&#x62C5;&#x5FC3;&#xFF0C;&#x540E;&#x9762;&#x4F1A;&#x6709;&#x4E24;&#x6B21;&#x673A;&#x4F1A;&#x901A;&#x8FC7;&#x56DE;&#x5F52;&#x4FEE;&#x6B63;&#x68C0;&#x6D4B;&#x6846;&#x7684;&#x4F4D;&#x7F6E;</p>
+<div align="center"><img src="https://img-blog.csdnimg.cn/48ceb970ac5c477d898603cf99855d05.png?x-oss-process=image,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA5aSn55m9576KX0FyaWVz,size_20,color_FFFFFF,t_70,g_se,x_16"></div>
+
+<p>&#x6211;&#x4EEC;&#x5BF9;&#x8BBA;&#x6587;&#x56FE;&#x7247;&#x505A;&#x5982;&#x4E0B;&#x4E24;&#x70B9;&#x89E3;&#x91CA;&#xFF1A;</p>
+<ul>
+<li><p>&#x9996;&#x5148;&#xFF0C;Conv Layers &#x4E2D;&#x7684; conv5 &#x7684;&#x8F93;&#x51FA;&#x7EF4;&#x5EA6;&#x4E3A; 256&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x6709; 256 &#x5F20;&#x7279;&#x5F81;&#x56FE;&#xFF0C;&#x9009;&#x7528;&#x8FD9;&#x4E00;&#x5C42;&#x7684;&#x7279;&#x5F81;&#x505A; RPN &#x7684;&#x8F93;&#x5165;&#xFF0C;&#x90A3;&#x4E48;&#x5728;&#x6BCF;&#x4E2A;&#x70B9;&#x4E0A;&#x7EF4;&#x5EA6;&#x90FD;&#x662F; 256</p>
+</li>
+<li><p>&#x5047;&#x8BBE;&#x6BCF;&#x4E2A;&#x70B9;&#x6709; $k$ &#x4E2A; anchor&#xFF0C;&#x6BCF;&#x4E2A; anchor &#x5206;&#x4E3A; positive &#x548C; negative&#xFF0C;&#x90A3;&#x4E48;&#x5206;&#x7C7B;&#x5F97;&#x5206;&#x5C31;&#x662F; $2k$&#xFF1B;&#x540C;&#x65F6;&#xFF0C;&#x6BCF;&#x4E2A; anchor &#x90FD;&#x6709; $(x, y, w, h)$  4 &#x4E2A;&#x504F;&#x79FB;&#x91CF;&#xFF0C;&#x6240;&#x4EE5;&#x4F1A;&#x6709; $4k$ coordinates</p>
+</li>
+</ul>
+<p>&#x4E8E;&#x662F;&#xFF0C;&#x63A5;&#x4E0B;&#x6765; anchor generation layer &#x7684;&#x64CD;&#x4F5C;&#x5C31;&#x662F;&#x5728;&#x539F;&#x56FE;&#x5C3A;&#x5EA6;&#x4E0A;&#x751F;&#x6210;&#x5BC6;&#x5BC6;&#x9EBB;&#x9EBB;&#x7684;&#x5019;&#x9009; anchor&#xFF0C;&#x8BBA;&#x6587;&#x4E2D;&#x539F;&#x56FE;&#x7684;&#x5927;&#x5C0F;&#x4E3A; $800\times600$&#xFF0C;&#x5728;&#x901A;&#x8FC7; Conv Layer &#x540E;&#xFF0C;feature map &#x7684;&#x5927;&#x5C0F;&#x5C31;&#x662F; $50\times38$&#xFF08;&#x5411;&#x4E0A;&#x53D6;&#x6574;&#xFF09;&#xFF0C;&#x90A3;&#x4E48;&#x5C31;&#x4F1A;&#x751F;&#x6210; $50\times38\times9=17100$ &#x4E2A; anchor</p>
+<div align="center"><img src="https://pic2.zhimg.com/80/v2-4b15828dfee19be726835b671748cc4d_1440w.jpg"></div>
+
+<h2 id="bounding-box-regression">Bounding Box Regression</h2>
+<p>&#x5982;&#x4E0B;&#x56FE;&#x6240;&#x793A;&#xFF0C;&#x7EA2;&#x8272;&#x7684;&#x6846;&#x4E3A;&#x63D0;&#x53D6;&#x7684; positive anchor box&#xFF0C;&#x7EFF;&#x8272;&#x7684;&#x6846;&#x4E3A; ground truth box&#xFF0C;&#x5373;&#x4FBF;&#x7EA2;&#x8272;&#x7684;&#x6846;&#x53EF;&#x4EE5;&#x8BC6;&#x522B;&#x51FA;&#x98DE;&#x673A;&#xFF0C;&#x4F46;&#x662F;&#x7531;&#x4E8E;&#x5B9A;&#x4F4D;&#x4E0D;&#x51C6;&#x786E;&#xFF0C;&#x6211;&#x4EEC;&#x9700;&#x8981; bbox regression &#x5BF9;&#x7EA2;&#x8272;&#x7684;&#x6846;&#x8FDB;&#x884C;&#x5FAE;&#x8C03;&#xFF0C;&#x4F7F;&#x5F97;&#x5176;&#x66F4;&#x52A0;&#x63A5;&#x8FD1;&#x4E8E; ground truth</p>
+<div align="center"><img src="https://pic4.zhimg.com/80/v2-93021a3c03d66456150efa1da95416d3_1440w.jpg"></div>
+
+<p>&#x5BF9;&#x4E8E;&#x4E00;&#x4E2A; box &#x4F7F;&#x7528; $(x,y,w,h)$ &#x8868;&#x793A;&#xFF0C;&#x5206;&#x522B;&#x8868;&#x793A;&#x4E2D;&#x5FC3;&#x70B9;&#x7684;&#x4F4D;&#x7F6E;&#x548C;&#x5BBD;&#x9AD8;&#x3002;&#x4E0B;&#x56FE;&#x4E2D;&#x8FD8;&#x662F;&#x7528;&#x7EA2;&#x8272;&#x7684;&#x6846;&#x8868;&#x793A; positive anchor box $A=(A_x,A_y,A_wA_h)$&#xFF0C;&#x7EFF;&#x8272;&#x7684;&#x6846;&#x8868;&#x793A; ground truth box $G=(G_x,G_y,G_w,G_h)$&#xFF0C;&#x6211;&#x4EEC;&#x5E0C;&#x671B;&#x5BFB;&#x5F97;&#x4E00;&#x79CD;&#x5173;&#x7CFB;&#x53EF;&#x4EE5;&#x4F7F; $A$ &#x7ECF;&#x8FC7;&#x6620;&#x5C04;&#x5F97;&#x5230;&#x4E00;&#x4E2A;&#x8DDF; ground truth box &#x66F4;&#x63A5;&#x8FD1;&#x7684; regression box $G&apos;=(G&apos;_x,G&apos;_y,G&apos;_w,G&apos;_h)$</p>
+<div align="center"><img src="https://pic2.zhimg.com/80/v2-ea7e6e48662bfa68ec73bdf32f36bb85_1440w.jpg"></div>
+
+<p>&#x6211;&#x4EEC;&#x5148;&#x505A;&#x5E73;&#x79FB;&#x64CD;&#x4F5C;
+<script type="math/tex; ">
+G'_x=A_w\cdot d_x(A)+A_x\\
+G'_y=A_h\cdot d_y(A)+A_y
+</script>
+&#x518D;&#x505A;&#x7F29;&#x653E;
+<script type="math/tex; ">
+G'_w=A_w\cdot exp(d_w(A))\\
+G'_h=A_h\cdot exp(d_h(A))
+</script>
+&#x5176;&#x5B9E;&#xFF0C;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x5B66;&#x4E60;&#x7684;&#x53C2;&#x6570;&#x53EA;&#x6709; 4 &#x4E2A; $d_x(A),d_y(A),d_w(A),d_h(A)$&#xFF0C;&#x5728; anchor box &#x4E0E; ground truth box &#x4E4B;&#x95F4;&#x7684;&#x5DEE;&#x5F02;&#x4E0D;&#x592A;&#x5927;&#x65F6;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x5C06;&#x5176;&#x770B;&#x4F5C;&#x662F;&#x4E00;&#x79CD;&#x7EBF;&#x6027;&#x53D8;&#x6362;&#xFF0C;&#x90A3;&#x4E48;&#x5C31;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x7EBF;&#x6027;&#x56DE;&#x5F52;&#x6765;&#x5FAE;&#x8C03;&#xFF08;&#x5DEE;&#x5F02;&#x8FC7;&#x5927;&#x65F6;&#xFF0C;&#x8FD9;&#x65F6;&#x5C06;&#x662F;&#x4E00;&#x4E2A;&#x975E;&#x7EBF;&#x6027;&#x7684;&#x95EE;&#x9898;&#xFF09;</p>
+<p>&#x7EBF;&#x6027;&#x53D8;&#x6362;&#x53EF;&#x4EE5;&#x8868;&#x793A;&#x4E3A; $Y=WX$&#xFF0C;&#x8F93;&#x5165;&#x662F; anchor &#x5BF9;&#x5E94;&#x7684; feature map &#x7EC4;&#x6210;&#x7684;&#x7279;&#x5F81;&#x5411;&#x91CF; $\phi(A)$&#xFF0C;&#x8BAD;&#x7EC3;&#x540C;&#x65F6;&#x4F20;&#x5165; $A$ &#x4E0E; $G$ &#x4E4B;&#x95F4;&#x7684;&#x5DEE;&#x5F02; $(t_x,t_y,t_w,t_h)$&#xFF0C;&#x90A3;&#x4E48;&#x53D8;&#x6362;&#x7684;&#x76EE;&#x6807;&#x51FD;&#x6570;&#x5C31;&#x53EF;&#x4EE5;&#x8868;&#x793A;&#x4E3A;
+<script type="math/tex; ">
+d_*(A)=W_*^T\cdot\phi(A)
+</script></p>
+<p>&#x4E3A;&#x4E86;&#x8BA9;&#x9884;&#x6D4B;&#x503C; $d<em>*(A)$ &#x4E0E;&#x771F;&#x5B9E;&#x503C; $t</em>*$ &#x7684;&#x5DEE;&#x8DDD;&#x6700;&#x5C0F;&#xFF0C;&#x8BBE;&#x8BA1; L1 &#x635F;&#x5931;&#x51FD;&#x6570;
+<script type="math/tex; ">
+Loss=\sum_i^N|t_*^i-W_*^T\cdot\phi(A^i)|
+</script>
+&#x51FD;&#x6570;&#x4F18;&#x5316;&#x76EE;&#x6807;&#x4E3A;
+<script type="math/tex; ">
+\hat W_*=\underset{W_*}{argmin}\ \sum_i^N|t_*^i-W_*^T\cdot\phi(A^i)|+\lambda||W_*||
+</script></p>
+<p>&#x5B9E;&#x9645;&#x4E2D;&#x4F7F;&#x7528; smooth-L1 &#x635F;&#x5931;
+<script type="math/tex; ">
+smooth_{L1}(x)=\left\{\begin{matrix}
+\frac{\sigma^2x^2}{2} & ||x|<\frac{1}{\sigma^2}\\ 
+|x||-\frac{0.5}{\sigma^2} & otherwise
+\end{matrix}\right.
+</script>
+&#x6E05;&#x695A;&#x4E86; bbox regression &#x4E0B;&#x9762;&#x6211;&#x4EEC;&#x8981;&#x505A;&#x7684;&#x5C31;&#x662F;&#x5728; RPN &#x7684;&#x7B2C;&#x4E8C;&#x6761;&#x8DEF;&#x5F84;&#x5BF9; proposal &#x8FDB;&#x884C; bbox regression&#xFF0C;&#x8BBA;&#x6587;&#x4E2D;&#x901A;&#x8FC7; $1\times1$ &#x7684;&#x5377;&#x79EF;&#x5B9E;&#x73B0;&#xFF0C;&#x5377;&#x79EF;&#x7684;&#x8F93;&#x51FA;&#x4E3A; 36&#xFF0C;&#x521A;&#x597D;&#x5BF9;&#x5E94;&#x4E00;&#x4E2A;&#x70B9; 9 &#x4E2A; anchor&#xFF0C;&#x6BCF;&#x4E2A; anchor &#x6709; 4 &#x4E2A;&#x56DE;&#x5F52;&#x504F;&#x91CF;</p>
+<h2 id="region-proposal-network">Region Proposal Network</h2>
+<p>Faster RCNN &#x629B;&#x5F03;&#x4F20;&#x7EDF;&#x7684;&#x6ED1;&#x52A8;&#x7A97;&#x53E3;&#x548C; ss&#xFF08;Selective Search&#xFF09;&#x65B9;&#x6CD5;&#x751F;&#x6210;&#x68C0;&#x6D4B;&#x6846;&#xFF0C;&#x76F4;&#x63A5;&#x91C7;&#x7528; RPN &#x751F;&#x6210;&#x68C0;&#x6D4B;&#x6846;&#x3002;RPN &#x7F51;&#x7EDC;&#x5206;&#x4E3A;&#x4E24;&#x6761;&#x7EBF;&#xFF0C;&#x4E00;&#x6761;&#x901A;&#x8FC7; softmax &#x5206;&#x7C7B;&#x5224;&#x65AD; anchor &#x662F;&#x6B63;&#x6837;&#x672C;&#x5206;&#x7C7B;&#x8FD8;&#x662F;&#x8D1F;&#x6837;&#x672C;&#x5206;&#x7C7B;&#xFF0C;&#x4E00;&#x6761;&#x8BA1;&#x7B97; anchor &#x7684; bbox regression &#x504F;&#x79FB;&#x91CF;&#x3002;&#x540E;&#x9762;&#x7684; proposal &#x5C42;&#x8D1F;&#x8D23;&#x7EFC;&#x5408; positive anchor &#x548C;&#x56DE;&#x5F52;&#x7684;&#x504F;&#x79FB;&#x91CF;&#x83B7;&#x5F97; proposal&#xFF0C;&#x540C;&#x65F6;&#x63D0;&#x51FA;&#x592A;&#x5C0F;&#x6216;&#x8D85;&#x51FA;&#x8FB9;&#x754C;&#x7684;&#x68C0;&#x6D4B;&#x6846;</p>
+<div align="center"><img src="https://www.telesens.co/wp-content/uploads/2018/03/img_5aa0695484e3e.png"></div>
+
+<p>RPN &#x8BAD;&#x7EC3;&#x7684;&#x6574;&#x4E2A;&#x635F;&#x5931;&#x51FD;&#x6570;&#x53EF;&#x4EE5;&#x8868;&#x793A;&#x4E3A; 
+<script type="math/tex; ">
+L(\left\{p_i\right\},\left\{t_i\right\})=\frac{1}{N_{cls}}\sum_iL_{cls}(p_i,p_i^*)+\lambda\frac{1}{N_{reg}}\sum_ip_i^*L_{reg}(t_i,t_i^*)
+</script>
+$p_i$ &#x8868;&#x793A; positive softmax probability&#xFF1B;&#x5982;&#x679C;&#x7B2C; $i$  &#x4E2A; anchor box &#x4E0E; ground truth box &#x7684; IoU &gt; 0.7 &#x5219; $p_i^<em>=1$ &#xFF0C;&#x5982;&#x679C; IoU &lt; 0.3&#xFF0C;$p_i^</em>=0$&#xFF0C;&#x81F3;&#x4E8E;&#xFF0C;IoU &#x843D;&#x5728; 0.3 &#x5230; 0.7 &#x4E4B;&#x95F4;&#x7684; anchor &#x5219;&#x4E0D;&#x53C2;&#x4E0E;&#x8BAD;&#x7EC3;&#xFF1B;$t$  &#x8868;&#x793A; predicted bounding box&#xFF0C;$t^*$ &#x4EE3;&#x8868; positive anchor &#x5BF9;&#x5E94;&#x7684; ground truth box</p>
+<p>&#x56DE;&#x5F52;&#x635F;&#x5931;&#x4E58;&#x4EE5;&#x4E86;&#x4E00;&#x4E2A;&#x7CFB;&#x6570; $p<em>i^*$ &#x8868;&#x793A;&#x6211;&#x4EEC;&#x53EA;&#x5173;&#x5FC3; positive anchor &#x7684;&#x635F;&#x5931;&#x3002;&#x7531;&#x4E8E;&#x5B9E;&#x9645;&#x8BA1;&#x7B97;&#x4E2D;&#xFF0C;$N</em>{cls}$ &#x548C; $N_{reg}$ &#x7684;&#x6570;&#x91CF;&#x7EA7;&#x76F8;&#x5DEE;&#x8F83;&#x5927;&#xFF0C;&#x6240;&#x4EE5;&#x5F15;&#x5165;&#x4E86;&#x5E73;&#x8861;&#x56E0;&#x5B50; $\lambda$</p>
+<p>&#x5982;&#x524D;&#x9762;&#x6240;&#x8FF0;&#xFF0C;$L_{reg}$ &#x4F7F;&#x7528; smooth-L1 &#x635F;&#x5931;
+<script type="math/tex; ">
+L_{reg}(t_i,t_i^*)=\sum_{i\in\left\{x,y,w,h\right\}}smooth_{L_1}(t_i-t_i^*)Proposal layer
+</script></p>
+<p><script type="math/tex; ">
+t_x=(x-x_a)/w_a,\ t_y=(y-y_a)/h_a\\
+t_w=log(w/w_a),\ t_h=log(h/h_a)\\
+t_x^*=(x^*-x_a)/w_a,\ t_y^*=(y^*-y)/h_a\\
+t_w^*=log(w^*/w_a),\ t_h^*=log(h^*/h_a)
+</script></p>
+<p>&#x5176;&#x4E2D;&#xFF0C;$x,x_a,x^*$ &#x5206;&#x522B;&#x5BF9;&#x5E94; predicted box&#xFF0C;anchor box &#x548C; ground truth box</p>
+<h2 id="proposal-layer">proposal layer</h2>
+<p>proposal layer &#x8D1F;&#x8D23;&#x7EFC;&#x5408;&#x56DE;&#x5F52;&#x504F;&#x91CF;&#x548C; positive anchor&#xFF0C;&#x8BA1;&#x7B97;&#x51FA;&#x7CBE;&#x786E;&#x7684; proposal&#x3002;&#x9664;&#x4E86;&#x56DE;&#x5F52;&#x504F;&#x91CF;&#x548C; positive anchor &#x5916;&#xFF0C;proposal layer &#x8FD8;&#x6709;&#x4E00;&#x4E2A;&#x8F93;&#x5165; im_info&#xFF0C;&#x4EE5;&#x53CA;&#x4E00;&#x4E2A;&#x53C2;&#x6570; feature_stride = 16</p>
+<ul>
+<li>feature_stride &#x8BB0;&#x5F55;&#x4E86; Conv Layers &#x7684;&#x7F29;&#x653E;&#x7A0B;&#x5EA6;&#xFF0C;&#x5373;&#x7ECF;&#x8FC7; 4 &#x6B21;&#x6C60;&#x5316;&#xFF0C;&#x6BCF;&#x6B21;&#x7F29;&#x5C0F;&#x4E3A;&#x539F;&#x6765;&#x7684;&#x4E00;&#x534A;&#xFF0C;&#x6700;&#x7EC8;&#x7684; feature map &#x4E3A; $\frac{M}{16}\times\frac{N}{16}$</li>
+<li>&#x5BF9;&#x4E8E;&#x4E00;&#x5F20;&#x4EFB;&#x610F;&#x5927;&#x5C0F; $P\times Q$ &#x7684;&#x56FE;&#x50CF;&#x90FD;&#x4F1A;&#x7F29;&#x653E;&#x5230;&#x56FA;&#x5B9A;&#x5927;&#x5C0F; $M\times N$&#xFF0C;im_fo &#x8BB0;&#x5F55;&#x7684;&#x5219;&#x662F;&#x8FD9;&#x4E00;&#x6B65;&#x7684;&#x7F29;&#x653E;&#x4FE1;&#x606F;&#xFF0C;&#x5373; $im_fo = [M, N, scale_factor]$</li>
+</ul>
+<div align="center"><img src="https://pic1.zhimg.com/80/v2-1ac5f8a2899ee413464ecf7866f8f840_1440w.jpg"></div>
+
+
+
+<p>proposal layer &#x5177;&#x4F53;&#x7684;&#x5DE5;&#x4F5C;&#x6D41;&#x7A0B;&#x5982;&#x4E0B;&#xFF1A;</p>
+<ul>
+<li>&#x5229;&#x7528;&#x56DE;&#x5F52;&#x504F;&#x91CF;&#x5BF9;&#x6240;&#x6709;&#x7684; anchor &#x505A;&#x4F4D;&#x7F6E;&#x4FEE;&#x6B63;&#x751F;&#x6210; anchor</li>
+<li>&#x6309;&#x7167;&#x8F93;&#x5165;&#x7684; positive softmax socre &#x5BF9; anchor &#x8FDB;&#x884C;&#x6392;&#x5E8F;&#xFF0C;&#x7136;&#x540E;&#x63D0;&#x53D6;&#x524D; 12k &#x4E2A;&#xFF08;&#x6D4B;&#x8BD5;&#x65F6; 6k&#xFF09;&#x4FEE;&#x6B63;&#x4F4D;&#x7F6E;&#x540E;&#x7684; positive anchor</li>
+<li>&#x9650;&#x5B9A;&#x8D85;&#x51FA;&#x56FE;&#x50CF;&#x8FB9;&#x754C;&#x7684; positive anchor &#x4E3A;&#x56FE;&#x50CF;&#x8FB9;&#x754C;&#xFF0C;&#x9632;&#x6B62;&#x540E;&#x7EED; RoI Pooling &#x65F6; proposal &#x8D85;&#x51FA;&#x56FE;&#x50CF;&#x8FB9;&#x754C;</li>
+<li>&#x5254;&#x9664;&#x5C3A;&#x5BF8;&#x975E;&#x5E38;&#x5C0F;&#x7684; positive anchor</li>
+<li>&#x5BF9;&#x5269;&#x4F59;&#x7684; positive anchor &#x8FDB;&#x884C;&#x975E;&#x6700;&#x5927;&#x6291;&#x5236;&#xFF0C;&#x7136;&#x540E;&#x53D6;&#x524D; 2k &#x4E2A;&#xFF08;&#x6D4B;&#x8BD5;&#x65F6;300 &#x4E2A;&#xFF09; positive anchor</li>
+<li>&#x6700;&#x540E;&#x53D6;&#x6311;&#x51FA; 128 &#x4E2A;&#x6B63;&#x6837;&#x672C;&#x548C; 128 &#x4E2A;&#x8D1F;&#x6837;&#x672C;&#x7528;&#x4E8E;&#x8BAD;&#x7EC3;</li>
+</ul>
+<p>&#x503C;&#x5F97;&#x4E00;&#x63D0;&#x7684;&#x662F;&#x8FD9;&#x91CC; proposal layer &#x7684;&#x8F93;&#x51FA;&#x662F;&#x5BF9;&#x5E94; $M\times N$ &#x8F93;&#x5165;&#x5C3A;&#x5EA6;&#x7684;&#xFF0C;&#x800C;&#x4E0D;&#x662F; feature map &#x4E0A;&#x7684;&#x5C3A;&#x5EA6;</p>
+<div align="center"><img src="https://www.telesens.co/wp-content/uploads/2018/03/img_5aa5766d53b63.png"></div>
+
+<h2 id="roi-pooling">RoI Pooling</h2>
+<p>&#x4E3A;&#x4EC0;&#x4E48;&#x9700;&#x8981; RoI Pooling &#x5462;&#xFF1F;</p>
+<p>&#x5728;&#x5386;&#x53F2;&#x4E0A;&#xFF0C;&#x7F51;&#x7EDC;&#x8BAD;&#x7EC3;&#x597D;&#x540E;&#x8F93;&#x5165;&#x56FE;&#x50CF;&#x7684;&#x5C3A;&#x5BF8;&#x4E5F;&#x5C31;&#x56FA;&#x5B9A;&#x4E86;&#xFF0C;&#x5BF9;&#x4E8E;&#x8F93;&#x5165;&#x5927;&#x5C0F;&#x4E0D;&#x540C;&#x7684;&#x56FE;&#x50CF;&#x6709;&#x4E24;&#x79CD;&#x89E3;&#x51B3;&#x65B9;&#x6CD5;&#xFF1A;&#xFF08;1&#xFF09;&#x4ECE;&#x56FE;&#x50CF;&#x4E2D;&#x622A;&#x53D6;&#x51FA;&#x56FA;&#x5B9A;&#x5927;&#x5C0F;&#x7684;&#x533A;&#x57DF;&#xFF1B;&#xFF08;2&#xFF09;&#x5C06;&#x56FE;&#x50CF; warp &#x6210;&#x56FA;&#x5B9A;&#x5927;&#x5C0F;&#x3002;&#x4F46;&#x662F;&#x8FD9;&#x4E24;&#x79CD;&#x65B9;&#x5F0F;&#x90FD;&#x5B58;&#x5728;&#x4E00;&#x5B9A;&#x7684;&#x95EE;&#x9898;&#xFF0C;&#x7B2C;&#x4E00;&#x79CD;&#x7834;&#x574F;&#x4E86;&#x56FE;&#x50CF;&#x7684;&#x5B8C;&#x6574;&#x7ED3;&#x6784;&#xFF0C;&#x7B2C;&#x4E8C;&#x79CD;&#x7834;&#x574F;&#x4E86;&#x56FE;&#x50CF;&#x7684;&#x539F;&#x59CB;&#x5F62;&#x72B6;&#x4FE1;&#x606F;</p>
+<div align="center"><img src="https://pic1.zhimg.com/80/v2-e525342cbde476a11c48a6be393f226c_1440w.jpg"></div>
+
+<p>&#x800C; RoI Pooling &#x7684;&#x63D0;&#x51FA;&#x6B63;&#x662F;&#x4E3A;&#x4E86;&#x89E3;&#x51B3;&#x8FD9;&#x4E9B;&#x95EE;&#x9898;&#xFF0C;&#x5BF9;&#x5927;&#x5C0F;&#x5F62;&#x72B6;&#x4E0D;&#x540C;&#x7684; proposal &#x8FDB;&#x884C;&#x4E00;&#x4E2A;&#x7EDF;&#x4E00;&#x5316;&#x7684;&#x5904;&#x7406;&#x3002;RoI Pooling &#x5728; Fast RCNN &#x4E2D;&#x5C31;&#x5DF2;&#x7ECF;&#x63D0;&#x51FA;&#xFF0C;&#x5927;&#x81F4;&#x6D41;&#x7A0B;&#x4E5F;&#x662F;&#x76F8;&#x540C;&#x7684;&#xFF1A;</p>
+<ul>
+<li>&#x7531;&#x4E8E;&#x524D;&#x9762;&#x4F20;&#x5165;&#x7684; proposal &#x5C3A;&#x5BF8;&#x5BF9;&#x5E94; $M\times N$&#xFF0C;&#x6240;&#x4EE5;&#x5148;&#x5C06;&#x5176;&#x6620;&#x5C04;&#x56DE; $\frac{M}{16}\times\frac{N}{16}$ &#x7684; feature map &#x5927;&#x5C0F;&#x8FDB;&#x884C;&#x8BA8;&#x8BBA;</li>
+<li>&#x5C06;&#x6BCF;&#x4E2A; proposal &#x5BF9;&#x5E94;&#x7684;&#x533A;&#x57DF;&#x5206;&#x4E3A; $pooled_w\times pooled_h$&#xFF08;e.g. $7\times7$&#xFF09;&#x5927;&#x5C0F;&#x7684;&#x7F51;&#x683C;</li>
+<li>&#x6700;&#x540E;&#x8FDB;&#x884C; max pooling &#x64CD;&#x4F5C;</li>
+</ul>
+<h2 id="classification">Classification</h2>
+<p>Classification &#x901A;&#x8FC7;&#x524D;&#x9762;&#x7684; proposal feature map &#x7ECF;&#x8FC7;&#x5168;&#x8FDE;&#x63A5;&#x5C42;&#x548C; softmax &#x8BA1;&#x7B97;&#x6BCF;&#x4E2A; proposal &#x5BF9;&#x5E94;&#x6BCF;&#x4E2A;&#x7C7B;&#x522B;&#x7684;&#x5F97;&#x5206;&#x3002;&#x540C;&#x65F6;&#xFF0C;&#x5728; Classification &#x4E2D;&#x4F1A;&#x518D;&#x6B21;&#x5229;&#x7528; bbox regression &#x5BF9;&#x6BCF;&#x4E2A; proposal &#x7684;&#x4F4D;&#x7F6E;&#x8FDB;&#x884C;&#x7CBE;&#x4FEE;</p>
+<div align="center"><img src="https://www.telesens.co/wp-content/uploads/2018/03/img_5aa55c97f3287.png"></div>
+
+<h2 id="faster-rcnn-&#x8BAD;&#x7EC3;">Faster RCNN &#x8BAD;&#x7EC3;</h2>
+<p>RPN &#x548C; Fast RCNN &#x90FD;&#x4F1A;&#x8981;&#x6C42;&#x5229;&#x7528; CNN &#x7F51;&#x7EDC;&#x63D0;&#x53D6;&#x56FE;&#x50CF;&#x7279;&#x5F81;&#xFF0C;&#x6240;&#x4EE5;&#x8BBA;&#x6587;&#x7684;&#x505A;&#x6CD5;&#x662F;&#x4F7F; RPN &#x548C; Fast RCNN &#x5171;&#x4EAB;&#x540C;&#x4E00;&#x4E2A;&#x5377;&#x79EF;&#x7F51;&#x7EDC;&#x3002;&#x4E8E;&#x662F;&#xFF0C;Fast RCNN &#x7684;&#x8BAD;&#x7EC3;&#x7C7B;&#x4F3C;&#x4E8E;&#x4E00;&#x79CD;&#x5F04;&#x8FED;&#x4EE3;&#x7684;&#x8FC7;&#x7A0B;&#xFF1A;</p>
+<ul>
+<li>&#x5148;&#x8BAD;&#x7EC3; RPN&#xFF0C;&#x7136;&#x540E;&#x4F7F;&#x7528;&#x5F97;&#x5230;&#x7684;&#x5019;&#x9009;&#x533A;&#x57DF;&#x8BAD;&#x7EC3; Fast RCNN</li>
+<li>&#x63A5;&#x7740;&#x4F7F;&#x7528; Fast RCNN &#x4E2D;&#x5173;&#x4E8E;&#x5377;&#x79EF;&#x7F51;&#x7EDC;&#x7684;&#x90E8;&#x5206;&#x53BB;&#x521D;&#x59CB;&#x5316; RPN&#xFF0C;&#x7136;&#x540E;&#x518D;&#x6B21;&#x8BAD;&#x7EC3; RPN&#xFF0C;&#x8FD9;&#x91CC;&#x4E0D;&#x8DDF;&#x65B0;&#x5173;&#x4E8E;&#x5377;&#x79EF;&#x7F51;&#x7EDC;&#x7684;&#x5185;&#x5BB9;&#xFF0C;&#x4EC5;&#x66F4;&#x65B0; RPN &#x7279;&#x6709;&#x7684;&#x90E8;&#x5206;</li>
+<li>&#x6700;&#x540E;&#x518D;&#x6B21;&#x8BAD;&#x7EC3; Fast RCNN&#xFF0C;&#x8FD9;&#x91CC;&#x4E5F;&#x662F;&#x4E0D;&#x66F4;&#x65B0;&#x5173;&#x4E8E;&#x5377;&#x79EF;&#x7F51;&#x7EDC;&#x7684;&#x90E8;&#x5206;&#xFF0C;&#x4EC5;&#x66F4;&#x65B0; Fast RCNN &#x7279;&#x6709;&#x7684;&#x5C42;</li>
+</ul>
+<p>&#xFF08;&#x73B0;&#x5728;&#xFF0C;&#x5728; github &#x4E0A;&#x5F00;&#x6E90;&#x7684;&#x5B9E;&#x73B0;&#x5927;&#x591A;&#x91C7;&#x7528;&#x8FD1;&#x4F3C;&#x8054;&#x5408;&#x8BAD;&#x7EC3; approximate joint training&#xFF0C;&#x91C7;&#x7528;&#x7AEF;&#x5230;&#x7AEF;&#x7684;&#x4E00;&#x6B65;&#x8BAD;&#x7EC3;&#xFF09;</p>
+<div align="center"><img src="https://img-blog.csdnimg.cn/d78f6b535f28468998d9ca66451d1d5a.png?x-oss-process=image,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA5aSn55m9576KX0FyaWVz,size_20,color_FFFFFF,t_70,g_se,x_16"></div>
+
+<p>&#x4E0B;&#x9762;&#x4E24;&#x5E45;&#x56FE;&#x5C55;&#x793A;&#x4E86; Fast RCNN &#x7684;&#x5B8C;&#x6574;&#x6D41;&#x7A0B;</p>
+<div align="center"><img src="https://pic3.zhimg.com/v2-fbece817952865689187e68f0af86792_r.jpg"></div>
+
+
+
+<div align="center"><img src="https://www.telesens.co/wp-content/uploads/2018/03/img_5a9ffec911c19.png"></div>
+
+
+
+
+
+
+
+
+
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="【论文】Fast RCNN.html" class="navigation navigation-prev " aria-label="Previous page: Fast RCNN">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="【论文】FEWVLM.html" class="navigation navigation-next " aria-label="Next page: FEWVLM">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Faster RCNN","level":"2.21","depth":1,"next":{"title":"FEWVLM","level":"2.22","depth":1,"path":"【论文】FEWVLM.md","ref":"【论文】FEWVLM.md","articles":[]},"previous":{"title":"Fast RCNN","level":"2.20","depth":1,"path":"【论文】Fast RCNN.md","ref":"【论文】Fast RCNN.md","articles":[]},"dir":"ltr"},"config":{"plugins":["intopic-toc","expandable-chapters","copy-code-button","flexible-alerts","-lunr","-search","search-pro","mathjax-pro"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"intopic-toc":{"isCollapsed":true,"isScrollspyActive":true,"label":"目录","maxDepth":6,"mode":"nested","selector":".markdown-section h1, .markdown-section h2, .markdown-section h3, .markdown-section h4, .markdown-section h5, .markdown-section h6","visible":true},"search-pro":{},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"mathjax-pro":{"forceSVG":false,"version":"2.7.7"},"flexible-alerts":{"danger":{"className":"danger","icon":"fa fa-ban","label":"CORE CONTENT"},"note":{"className":"info","icon":"fa fa-info-circle","label":"NOTE"},"style":"callout","tip":{"className":"tip","icon":"fa fa-lightbulb-o","label":"TIPS"},"warning":{"className":"warning","icon":"fa fa-exclamation-triangle","label":"SUPPLEMENT"}},"copy-code-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"langaue":"zh-hans","theme":"default","author":"aries-yhf","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"算法笔记","gitbook":"*","description":"算法"},"file":{"path":"【论文】Faster RCNN.md","mtime":"2021-11-18T10:58:36.661Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-09-13T12:21:53.440Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-intopic-toc/anchor.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-intopic-toc/gumshoe.polyfills.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-intopic-toc/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-copy-code-button/toggle.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-flexible-alerts/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-mathjax-pro/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
