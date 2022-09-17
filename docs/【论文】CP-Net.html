@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>CP-Net · 算法笔记</title>
+        <title>CP-Net · 论文笔记</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -1053,7 +1053,7 @@
                                 <hr>
 <p>&#x3010;&#x8BBA;&#x6587;&#x3011;Li, K., Guo, D., &amp; Wang, M. (2021). Proposal-Free Video Grounding with Contextual Pyramid Network. &#xFF08;<a href="https://ojs.aaai.org/index.php/AAAI/article/view/16285" target="_blank">pdf</a>&#xFF09;</p>
 <hr>
-<p>&#x4F5C;&#x8005;&#x63D0;&#x51FA;&#x7684;&#x6A21;&#x578B;&#x53EB; Contextual Pyramid Network (CPNet) &#xFF0C;&#x91C7;&#x7528;&#x91D1;&#x5B57;&#x5854;&#x7ED3;&#x6784;&#x5728; 3 &#x4E2A; temporal scales ($T<em>T,\frac{T}{2}</em>\frac{T}{2},\frac{T}{4}*\frac{T}{4}$) &#x63D0;&#x53D6; 2D contextual correlation maps&#xFF0C;2D correlation map  &#x7528;&#x4E8E;&#x5EFA;&#x6A21;&#x89C6;&#x9891;&#x4E2D;&#x4E24;&#x4E2A; moment &#x4E4B;&#x95F4;&#x7684;&#x5173;&#x7CFB;&#xFF08;past&#x2192;current, current&#x2190;feature&#xFF09;&#x3002;&#x6A21;&#x578B;&#x91C7;&#x7528;&#x9010;&#x6B65;&#x7684;&#x65B9;&#x5F0F;&#x6269;&#x5927;&#x65F6;&#x95F4;&#x7EF4;&#x5EA6;&#x7684;&#x611F;&#x53D7;&#x91CE;&#xFF0C;&#x83B7;&#x5F97;&#x6574;&#x4E2A;&#x89C6;&#x9891;&#x7684; temporal contexts&#xFF0C;&#x6700;&#x540E;&#x4F7F;&#x7528;&#x4E00;&#x4E2A;&#x65F6;&#x95F4;&#x7EF4;&#x5EA6;&#x4E0A;&#x7684;&#x81EA;&#x6CE8;&#x610F;&#x529B;&#x56DE;&#x5F52;&#x9884;&#x6D4B;&#x65F6;&#x95F4;&#x8FB9;&#x754C;</p>
+<p>&#x4F5C;&#x8005;&#x63D0;&#x51FA;&#x7684;&#x6A21;&#x578B;&#x53EB; Contextual Pyramid Network (CPNet) &#xFF0C;&#x91C7;&#x7528;&#x91D1;&#x5B57;&#x5854;&#x7ED3;&#x6784;&#x5728; 3 &#x4E2A; temporal scales (<script type="math/tex; ">T*T,\frac{T}{2}*\frac{T}{2},\frac{T}{4}*\frac{T}{4}</script>) &#x63D0;&#x53D6; 2D contextual correlation maps&#xFF0C;2D correlation map  &#x7528;&#x4E8E;&#x5EFA;&#x6A21;&#x89C6;&#x9891;&#x4E2D;&#x4E24;&#x4E2A; moment &#x4E4B;&#x95F4;&#x7684;&#x5173;&#x7CFB;&#xFF08;past&#x2192;current, current&#x2190;feature&#xFF09;&#x3002;&#x6A21;&#x578B;&#x91C7;&#x7528;&#x9010;&#x6B65;&#x7684;&#x65B9;&#x5F0F;&#x6269;&#x5927;&#x65F6;&#x95F4;&#x7EF4;&#x5EA6;&#x7684;&#x611F;&#x53D7;&#x91CE;&#xFF0C;&#x83B7;&#x5F97;&#x6574;&#x4E2A;&#x89C6;&#x9891;&#x7684; temporal contexts&#xFF0C;&#x6700;&#x540E;&#x4F7F;&#x7528;&#x4E00;&#x4E2A;&#x65F6;&#x95F4;&#x7EF4;&#x5EA6;&#x4E0A;&#x7684;&#x81EA;&#x6CE8;&#x610F;&#x529B;&#x56DE;&#x5F52;&#x9884;&#x6D4B;&#x65F6;&#x95F4;&#x8FB9;&#x754C;</p>
 <p>&#x5982;&#x56FE; 1 &#x6240;&#x793A;&#xFF0C;&#x6709;&#x65F6;&#x89C6;&#x9891;&#x4F1A;&#x5305;&#x542B;&#x4E00;&#x4E9B;&#x5728;&#x8BED;&#x4E49;&#x4E0A;&#x5BB9;&#x6613;&#x6DF7;&#x6DC6;&#x7684; units&#xFF0C;&quot;sit up&quot; &#x548C; &quot;go down&quot; &#x4E24;&#x4E2A;&#x52A8;&#x4F5C;&#x5BF9;&#x5E94;&#x4E0D;&#x540C;&#x7684;&#x65F6;&#x95F4;&#x8FB9;&#x754C;&#x3002;&#x9488;&#x5BF9;&#x8FD9;&#x79CD;&#x60C5;&#x51B5;&#xFF0C;&#x4F5C;&#x8005;&#x5C1D;&#x8BD5;&#x901A;&#x8FC7;&#x65F6;&#x95F4;&#x7EBF;&#x7D22;&#x6765;&#x89E3;&#x51B3;&#x5B9A;&#x4F4D;&#x65F6;&#x7684;&#x95EE;&#x9898;&#x3002;&#x4E0D;&#x540C;&#x4E8E;&#x4EE5;&#x5F80;&#x5339;&#x914D; query &#x548C; candidate proposals &#x7684;&#x505A;&#x6CD5;&#xFF0C;&#x4F5C;&#x8005;&#x901A;&#x8FC7;&#x4EFB;&#x610F;&#x4E24;&#x4E2A;&#x7247;&#x6BB5;&#x7684;&#x7EC6;&#x7C92;&#x5EA6; temporal correlation &#x6765;&#x4F18;&#x5316; location regression </p>
 <div align="center"><img src="https://img-blog.csdnimg.cn/938eb7acde2a42228795477a0b1f211d.png"></div>
 
@@ -1064,59 +1064,59 @@
 <p>&#x522B;&#x770B;&#x8BBA;&#x6587;&#x5199;&#x4E86;&#x4E00;&#x5927;&#x5806;&#x5565;&#x73A9;&#x610F;&#xFF0C;&#x5176;&#x5B9E;&#x5C31;&#x662F;&#x4E00;&#x4E2A; QANet backbone&#xFF0C;&#x4E00;&#x4E2A; shared  feature encoder + &#x4E00;&#x4E2A; co-attention + &#x4E00;&#x4E2A; combined feature encoder&#xFF0C;&#x5728; DEBUG &#x548C; VSLNet &#x4E2D;&#x90FD;&#x51FA;&#x73B0;&#x8FC7;&#xFF0C;&#x6CA1;&#x6709;&#x4EC0;&#x4E48;&#x597D;&#x8BF4;</p>
 <p><strong>Contextual Pyramid</strong></p>
 <p>&#x4E4B;&#x524D;&#x7684;&#x4E00;&#x7BC7;&#x5DE5;&#x4F5C;&#x901A;&#x8FC7; non-local operation &#x6355;&#x6349;&#x5230; temporal &#x5168;&#x5C40;&#x7684;&#x4F9D;&#x8D56;&#x5173;&#x7CFB;&#xFF0C;&#x53D7;&#x6B64;&#x542F;&#x53D1;&#xFF0C;Contextual Pyramid &#x91CD;&#x70B9;&#x7814;&#x7A76;&#x6BCF;&#x4E2A; 2D temporal matrix &#x4E0A;&#x7684;&#x4EFB;&#x610F;&#x4E24;&#x4E2A;&#x65F6;&#x95F4;&#x70B9;&#x4E4B;&#x95F4;&#x7684;&#x5173;&#x7CFB;</p>
-<p>&#x4E00;&#x822C;&#x4E00;&#x4E2A;&#x6807;&#x51C6;&#x7684; non-local operation of positions $t_i$ and $t_j$ &#x8868;&#x793A;&#x4E3A;
-<script type="math/tex; ">
+<p>&#x4E00;&#x822C;&#x4E00;&#x4E2A;&#x6807;&#x51C6;&#x7684; non-local operation of positions <script type="math/tex; ">t_i</script> and <script type="math/tex; ">t_j</script> &#x8868;&#x793A;&#x4E3A;</p>
+<p><script type="math/tex; ">
 \mathbf y_{t_i}=\frac{1}{\mathcal C(\mathbf x)}\sum_{\forall j}f(\mathbf x_{t_i}, \mathbf x_{t_j})g(\mathbf x_{t_j})
-</script>
- &#x5176;&#x4E2D;&#xFF0C;$\mathcal C(\cdot)$ &#x8868;&#x793A; normalization function&#xFF0C;$g(\cdot)$ &#x8868;&#x793A;&#x4E00;&#x4E2A; feature embedding layer</p>
-<p>&#x5728; DP-Net &#x4E2D;&#x7528;&#x4E00;&#x4E2A; correlation matrix $M$ &#x8868;&#x793A;&#x4E0A;&#x5F0F;&#x4E2D;&#x7684; $\frac{1}{\mathcal C(\mathbf x)}\sum<em>{\forall j}f(\mathbf x</em>{t<em>i}, \mathbf x</em>{t<em>j})$ &#x8BA1;&#x7B97;&#xFF0C;$M$ &#x4E2D;&#x7684;&#x5143;&#x7D20; $m</em>{i,j}$ &#x8868;&#x793A; $\mathbf x<em>{t_i}$ &#x548C; $\mathbf x</em>{t_j}$ &#x4E4B;&#x95F4;&#x7684;&#x76F8;&#x4E92;&#x5F71;&#x54CD;&#x3002;$M$ &#x88AB;&#x5206;&#x4E3A;&#x4E0A;&#x4E09;&#x89D2;&#x90E8;&#x5206; $M^U$ &#x548C;&#x4E0B;&#x4E09;&#x89D2;&#x90E8;&#x5206; $M^L$&#xFF0C;$M^U$ &#x8868;&#x793A; past&#x2192;current&#xFF0C;$M^L$ current&#x2190;feature</p>
-<p>&#x4E3A;&#x8BA1;&#x7B97; $M$&#xFF0C;&#x4F5C;&#x8005;&#x5148;&#x8BBE;&#x8BA1;&#x4E86;&#x4E00;&#x4E2A; pairwise correlation function $f(\cdot)$
-<script type="math/tex; ">
+</script></p>
+<p> &#x5176;&#x4E2D;&#xFF0C;<script type="math/tex; ">\mathcal C(\cdot)</script> &#x8868;&#x793A; normalization function&#xFF0C;<script type="math/tex; ">g(\cdot)</script> &#x8868;&#x793A;&#x4E00;&#x4E2A; feature embedding layer</p>
+<p>&#x5728; DP-Net &#x4E2D;&#x7528;&#x4E00;&#x4E2A; correlation matrix <script type="math/tex; ">M</script> &#x8868;&#x793A;&#x4E0A;&#x5F0F;&#x4E2D;&#x7684; <script type="math/tex; ">\frac{1}{\mathcal C(\mathbf x)}\sum_{\forall j}f(\mathbf x_{t_i}, \mathbf x_{t_j})</script> &#x8BA1;&#x7B97;&#xFF0C;<script type="math/tex; ">M</script> &#x4E2D;&#x7684;&#x5143;&#x7D20; <script type="math/tex; ">m_{i,j}</script> &#x8868;&#x793A; <script type="math/tex; ">\mathbf x_{t_i}</script> &#x548C; <script type="math/tex; ">\mathbf x_{t_j}</script> &#x4E4B;&#x95F4;&#x7684;&#x76F8;&#x4E92;&#x5F71;&#x54CD;&#x3002;<script type="math/tex; ">M</script> &#x88AB;&#x5206;&#x4E3A;&#x4E0A;&#x4E09;&#x89D2;&#x90E8;&#x5206; <script type="math/tex; ">M^U</script> &#x548C;&#x4E0B;&#x4E09;&#x89D2;&#x90E8;&#x5206; <script type="math/tex; ">M^L</script>&#xFF0C;<script type="math/tex; ">M^U</script> &#x8868;&#x793A; past&#x2192;current&#xFF0C;<script type="math/tex; ">M^L</script> current&#x2190;feature</p>
+<p>&#x4E3A;&#x8BA1;&#x7B97; <script type="math/tex; ">M</script>&#xFF0C;&#x4F5C;&#x8005;&#x5148;&#x8BBE;&#x8BA1;&#x4E86;&#x4E00;&#x4E2A; pairwise correlation function <script type="math/tex; ">f(\cdot)</script></p>
+<p><script type="math/tex; ">
 f(\mathbf x_{t_i},\mathbf x_{t_j})=\theta(\mathbf x_{t_i})^T\phi(\mathbf x_{t_j})\in\mathbb R^{T\times T}
-</script>
-&#x5176;&#x4E2D;&#xFF0C;$\theta(\mathbf x<em>{t_i}),\phi(\mathbf x</em>{t_j})$ &#x8868;&#x793A;&#x4E24;&#x4E2A;&#x5168;&#x8FDE;&#x63A5;&#x5C42;</p>
-<p>&#x63A5;&#x7740;&#xFF0C;&#x5BF9; $f(\mathbf x,\mathbf x)$ &#x7684;&#x6BCF;&#x4E00;&#x884C;&#x8FDB;&#x884C; softmax &#x64CD;&#x4F5C;&#x5F97;&#x5230; normalized correlation matrix $M$&#xFF0C;&#x5373;
-<script type="math/tex; ">
+</script></p>
+<p>&#x5176;&#x4E2D;&#xFF0C;<script type="math/tex; ">\theta(\mathbf x_{t_i}),\phi(\mathbf x_{t_j})</script> &#x8868;&#x793A;&#x4E24;&#x4E2A;&#x5168;&#x8FDE;&#x63A5;&#x5C42;</p>
+<p>&#x63A5;&#x7740;&#xFF0C;&#x5BF9; <script type="math/tex; ">f(\mathbf x,\mathbf x)</script> &#x7684;&#x6BCF;&#x4E00;&#x884C;&#x8FDB;&#x884C; softmax &#x64CD;&#x4F5C;&#x5F97;&#x5230; normalized correlation matrix <script type="math/tex; ">M</script>&#xFF0C;&#x5373;</p>
+<p><script type="math/tex; ">
 M=\text{softmax}_{\text{row}}(f(\mathbf x,\mathbf x))\in\mathbb R^{T\times T}
-</script>
-&#x540C;&#x65F6;&#x8003;&#x8651;past &#x548C; feature &#x5BF9; current &#x7684;&#x5F71;&#x54CD;&#xFF0C;
-<script type="math/tex; ">
+</script></p>
+<p>&#x540C;&#x65F6;&#x8003;&#x8651;past &#x548C; feature &#x5BF9; current &#x7684;&#x5F71;&#x54CD;&#xFF0C;</p>
+<p><script type="math/tex; ">
 \mathbf x'=\mathbf M^U\otimes g(\mathbf x)+\mathbf M^L\otimes g(\mathbf x)\in\mathbb R^{d\times T}
-</script>
-&#x5176;&#x4E2D;&#xFF0C;$\otimes$ &#x8868;&#x793A;&#x77E9;&#x9635;&#x4E58;&#x6CD5;&#xFF0C;$g(\cdot)$ &#x8868;&#x793A;&#x4E00;&#x4E2A;&#x5168;&#x8FDE;&#x63A5;&#x5C42;</p>
-<p>&#x63A5;&#x7740;&#x518D;&#x7ECF;&#x8FC7;&#x4E00;&#x4E2A;&#x5377;&#x79EF;&#x5C42;&#x548C;&#x6B8B;&#x5DEE;&#x8FDE;&#x63A5;&#x5F97;&#x5230; $\mathbf x^<em>$
-<script type="math/tex; ">
+</script></p>
+<p>&#x5176;&#x4E2D;&#xFF0C;<script type="math/tex; ">\otimes</script> &#x8868;&#x793A;&#x77E9;&#x9635;&#x4E58;&#x6CD5;&#xFF0C;<script type="math/tex; ">g(\cdot)</script> &#x8868;&#x793A;&#x4E00;&#x4E2A;&#x5168;&#x8FDE;&#x63A5;&#x5C42;</p>
+<p>&#x63A5;&#x7740;&#x518D;&#x7ECF;&#x8FC7;&#x4E00;&#x4E2A;&#x5377;&#x79EF;&#x5C42;&#x548C;&#x6B8B;&#x5DEE;&#x8FDE;&#x63A5;&#x5F97;&#x5230; <script type="math/tex; ">\mathbf x^*</script></p>
+<p><script type="math/tex; ">
 \mathbf x^*=\text{Conv}_3(\mathbf x')+\mathbf x\in\mathbb R^{d\times T}
-</script>
-&#x4E0A;&#x9762;&#x63CF;&#x8FF0;&#x4E86;&#x4E00;&#x4E2A;&#x5B8C;&#x6574;&#x7684; context-aware layer &#x7684;&#x64CD;&#x4F5C;&#xFF0C;&#x7528;&#x6570;&#x5B66;&#x516C;&#x5F0F;&#x6982;&#x62EC;&#x4E3A; $\mathbf x^</em>=\text{CAM}(\mathbf x)$&#xFF0C;&#x56FE; 2 &#x4E2D;&#x91C7;&#x7528;&#x4E86;&#x4E09;&#x5C42;&#x7684; pyramid&#xFF0C;&#x6309;&#x7167; bottom-up pathway &#x5F97;&#x5230; $\left{\hat{\mathbf H_0}, \hat{\mathbf H_1},\hat{\mathbf H_2}\right}$&#xFF0C;&#x7136;&#x540E;&#x518D;&#x6309;&#x7167; top-down pathway &#x5F97;&#x5230; $\left{\hat{\mathbf H_0^<em>}, \hat{\mathbf H_1^</em>},\hat{\mathbf H_2^<em>}\right}$&#xFF0C;&#x5176;&#x4E2D; $\hat{\mathbf H^</em>_i}\in\mathbb R^{d\times\frac{T}{2^i}}$</p>
-<p>bottm-up pathway &#x53EF;&#x4EE5;&#x63CF;&#x8FF0;&#x4E3A;&#x5982;&#x4E0B;&#x5F62;&#x5F0F;
-<script type="math/tex; ">
-\hat{\mathbf H_0}\text{CAM}(\hat{\mathbf H})\\
+</script></p>
+<p>&#x4E0A;&#x9762;&#x63CF;&#x8FF0;&#x4E86;&#x4E00;&#x4E2A;&#x5B8C;&#x6574;&#x7684; context-aware layer &#x7684;&#x64CD;&#x4F5C;&#xFF0C;&#x7528;&#x6570;&#x5B66;&#x516C;&#x5F0F;&#x6982;&#x62EC;&#x4E3A; <script type="math/tex; ">\mathbf x^*=\text{CAM}(\mathbf x)</script>&#xFF0C;&#x56FE; 2 &#x4E2D;&#x91C7;&#x7528;&#x4E86;&#x4E09;&#x5C42;&#x7684; pyramid&#xFF0C;&#x6309;&#x7167; bottom-up pathway &#x5F97;&#x5230; <script type="math/tex; ">\left\{\hat{\mathbf H_0}, \hat{\mathbf H_1},\hat{\mathbf H_2}\right\}</script>&#xFF0C;&#x7136;&#x540E;&#x518D;&#x6309;&#x7167; top-down pathway &#x5F97;&#x5230; <script type="math/tex; ">\left\{\hat{\mathbf H_0^*}, \hat{\mathbf H_1^*},\hat{\mathbf H_2^*}\right\}</script>&#xFF0C;&#x5176;&#x4E2D; <script type="math/tex; ">\hat{\mathbf H^*_i}\in\mathbb R^{d\times\frac{T}{2^i}}</script></p>
+<p>bottm-up pathway &#x53EF;&#x4EE5;&#x63CF;&#x8FF0;&#x4E3A;&#x5982;&#x4E0B;&#x5F62;&#x5F0F;</p>
+<p><script type="math/tex; ">
+\hat{\mathbf H_0}=\text{CAM}(\hat{\mathbf H})\\
 \hat{\mathbf H_i}=\text{CAM}(\text{DownSampling}(\hat{\mathbf H_{i-1}}))
-</script>
-top-down pathway &#x5219;&#x63CF;&#x8FF0;&#x4E3A;
-<script type="math/tex; ">
-\hat{\mathbf H_2^*}=\text{Conv}_1(\hat{\mathbf H})\\
+</script></p>
+<p>top-down pathway &#x5219;&#x63CF;&#x8FF0;&#x4E3A;</p>
+<p><script type="math/tex; ">
+\hat{\mathbf H_2^*}=\text{Conv}_1(\hat{\mathbf H}_2)\\
 \hat{\mathbf H_i^*}=\hat{\mathbf H_{i-1}}+\text{DownSampling}(\hat{\mathbf H_{i}^*})
-</script>
-&#x6700;&#x540E;&#xFF0C;&#x4F5C;&#x8005;&#x5C06; $\hat{\mathbf H_1^<em>}$ &#x548C; $\hat{\mathbf H_2^</em>}$ resize &#x5230; $\hat{\mathbf H_0^*}$ &#x7684;&#x5927;&#x5C0F;&#xFF0C;&#x7136;&#x540E;&#x5C06;&#x5B83;&#x4EEC; cat &#x5230;&#x4E00;&#x8D77;&#x7ECF;&#x8FC7;&#x4E00;&#x4E2A;&#x5168;&#x8FDE;&#x63A5;&#x7F51;&#x7EDC;&#x5F97;&#x5230;&#x6700;&#x7EC8;&#x7684; context feature $\mathbf Z\in\mathbb R^{d\times T}$</p>
+</script></p>
+<p>&#x6700;&#x540E;&#xFF0C;&#x4F5C;&#x8005;&#x5C06; <script type="math/tex; ">\hat{\mathbf H_1^*}</script> &#x548C; <script type="math/tex; ">\hat{\mathbf H_2^*}</script> upsize &#x5230; <script type="math/tex; ">\hat{\mathbf H_0^*}</script> &#x7684;&#x5927;&#x5C0F;&#xFF0C;&#x7136;&#x540E;&#x5C06;&#x5B83;&#x4EEC; cat &#x5230;&#x4E00;&#x8D77;&#x7ECF;&#x8FC7;&#x4E00;&#x4E2A;&#x5168;&#x8FDE;&#x63A5;&#x7F51;&#x7EDC;&#x5F97;&#x5230;&#x6700;&#x7EC8;&#x7684; context feature <script type="math/tex; ">\mathbf Z\in\mathbb R^{d\times T}</script></p>
 <p><strong>Temporal Self-attentive Regression</strong></p>
-<p>Temporal Self-attentive Regression &#x7528;&#x6570;&#x5B66;&#x516C;&#x5F0F;&#x63CF;&#x8FF0;&#x5982;&#x4E0B;
-<script type="math/tex; ">
+<p>Temporal Self-attentive Regression &#x7528;&#x6570;&#x5B66;&#x516C;&#x5F0F;&#x63CF;&#x8FF0;&#x5982;&#x4E0B;</p>
+<p><script type="math/tex; ">
 \mathbf a^z=\text{softmax}(\mathbf W^T(\text{tanh}(\mathbf W^z\mathbf Z+\mathbf b_1))+\mathbf b_2) \\
 \mathbf Z'=\sum_{t=0}^T\mathbf a^z_t\mathbf Z_t\in\mathbb R^d \\
 t^s,t^e=\text{MLP}(\mathbf Z')\in[0,1]
-</script>
-$\mathbf a^z$ &#x662F;&#x4E00;&#x4E2A;&#x5173;&#x4E8E;&#x65F6;&#x95F4;&#x7EF4;&#x5EA6;&#x7684; attention solution&#xFF0C;MLP &#x540E;&#x9762;&#x8DDF;&#x4E00;&#x4E2A; sigmoid&#xFF0C;&#x5C06;&#x65F6;&#x95F4;&#x70B9;&#x5F52;&#x4E00;&#x5316;&#x5230; [0, 1]</p>
-<p>CP-Net &#x5B8C;&#x6574;&#x7684; loss &#x5305;&#x62EC;&#x4E24;&#x4E2A;&#x90E8;&#x5206; $\mathcal L<em>{cls}$ &#x548C; $\mathcal L</em>{reg}$&#xFF0C;$\mathcal L<em>{cls}$ &#x7528;&#x4E8E; temporal attention regression $\mathbf a$  &#x548C; location label &#x5728;&#x65F6;&#x95F4;&#x7EF4;&#x5EA6;&#x4E0A;&#x7684;&#x5BF9;&#x9F50;&#xFF0C;$\mathcal L</em>{reg}$ &#x5219;&#x7528;&#x4E8E;&#x6700;&#x540E;&#x65F6;&#x95F4;&#x8282;&#x70B9;&#x7684;&#x56DE;&#x5F52;
+</script></p>
+<p><script type="math/tex; ">\mathbf a^z</script> &#x662F;&#x4E00;&#x4E2A;&#x5173;&#x4E8E;&#x65F6;&#x95F4;&#x7EF4;&#x5EA6;&#x7684; attention solution&#xFF0C;MLP &#x540E;&#x9762;&#x8DDF;&#x4E00;&#x4E2A; sigmoid&#xFF0C;&#x5C06;&#x65F6;&#x95F4;&#x70B9;&#x5F52;&#x4E00;&#x5316;&#x5230; [0, 1]</p>
+<p>CP-Net &#x5B8C;&#x6574;&#x7684; loss &#x5305;&#x62EC;&#x4E24;&#x4E2A;&#x90E8;&#x5206; <script type="math/tex; ">\mathcal L_{cls}</script> &#x548C; <script type="math/tex; ">\mathcal L_{reg}</script>&#xFF0C;<script type="math/tex; ">\mathcal L_{cls}</script> &#x7528;&#x4E8E; temporal attention regression <script type="math/tex; ">\mathbf a</script>  &#x548C; location label &#x5728;&#x65F6;&#x95F4;&#x7EF4;&#x5EA6;&#x4E0A;&#x7684;&#x5BF9;&#x9F50;&#xFF0C;<script type="math/tex; ">\mathcal L_{reg}</script> &#x5219;&#x7528;&#x4E8E;&#x6700;&#x540E;&#x65F6;&#x95F4;&#x8282;&#x70B9;&#x7684;&#x56DE;&#x5F52;
 <script type="math/tex; ">
 \mathcal L_{cls} = -\frac{\sum_{t=0}^T\hat{\mathbf a^z_t}\log(\mathbf a^z_t)}{\sum_{t=0}^T\mathbf a^z_t}
 </script>
-&#x5982;&#x679C; $t$ &#x5C5E;&#x4E8E; gt &#x91CC;&#x9762;&#x7684;&#x4E00;&#x5E27;&#xFF0C;&#x90A3;&#x4E48; $\hat{\mathbf a^z_t}=1$&#xFF0C;&#x5426;&#x5219;&#x7F6E; $\hat{\mathbf a^z_t}=0$
+&#x5982;&#x679C; <script type="math/tex; ">t</script> &#x5C5E;&#x4E8E; gt &#x91CC;&#x9762;&#x7684;&#x4E00;&#x5E27;&#xFF0C;&#x90A3;&#x4E48; <script type="math/tex; ">\hat{\mathbf a^z_t}=1</script>&#xFF0C;&#x5426;&#x5219;&#x7F6E; <script type="math/tex; ">\hat{\mathbf a^z_t}=0</script>
 <script type="math/tex; ">
 \mathcal L_{reg}=R(t^s,\hat t^s)+R(t^e,\hat t^e)
 </script>
-&#x5176;&#x4E2D;&#xFF0C;$R$ &#x8868;&#x793A; smooth L1 loss</p>
+&#x5176;&#x4E2D;&#xFF0C;<script type="math/tex; ">R</script> &#x8868;&#x793A; smooth L1 loss</p>
 <div align="center"><img src="https://img-blog.csdnimg.cn/ff7dc9681fd94c568b1815688d4af43a.png"></div>
 <div align="center"><img src="https://img-blog.csdnimg.cn/c7b45fe8a14d4e3a99514d060a5ce1e7.png"></div>
 <div align="center"><img src="https://img-blog.csdnimg.cn/da95477b2bbc4b9aa0cf6a37f0160bb3.png"></div>
@@ -1167,7 +1167,7 @@ $\mathbf a^z$ &#x662F;&#x4E00;&#x4E2A;&#x5173;&#x4E8E;&#x65F6;&#x95F4;&#x7EF4;&#
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"CP-Net","level":"2.14","depth":1,"next":{"title":"CPT","level":"2.15","depth":1,"path":"【论文】CPT.md","ref":"【论文】CPT.md","articles":[]},"previous":{"title":"CoOP","level":"2.13","depth":1,"path":"【论文】CoOP.md","ref":"【论文】CoOP.md","articles":[]},"dir":"ltr"},"config":{"plugins":["intopic-toc","expandable-chapters","copy-code-button","flexible-alerts","-lunr","-search","search-pro","mathjax-pro"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"intopic-toc":{"isCollapsed":true,"isScrollspyActive":true,"label":"目录","maxDepth":6,"mode":"nested","selector":".markdown-section h1, .markdown-section h2, .markdown-section h3, .markdown-section h4, .markdown-section h5, .markdown-section h6","visible":true},"search-pro":{},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"mathjax-pro":{"forceSVG":false,"version":"2.7.7"},"flexible-alerts":{"danger":{"className":"danger","icon":"fa fa-ban","label":"CORE CONTENT"},"note":{"className":"info","icon":"fa fa-info-circle","label":"NOTE"},"style":"callout","tip":{"className":"tip","icon":"fa fa-lightbulb-o","label":"TIPS"},"warning":{"className":"warning","icon":"fa fa-exclamation-triangle","label":"SUPPLEMENT"}},"copy-code-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"langaue":"zh-hans","theme":"default","author":"aries-yhf","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"算法笔记","gitbook":"*","description":"算法"},"file":{"path":"【论文】CP-Net.md","mtime":"2022-06-27T05:39:48.538Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-09-13T12:21:53.440Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"CP-Net","level":"2.14","depth":1,"next":{"title":"CPT","level":"2.15","depth":1,"path":"【论文】CPT.md","ref":"【论文】CPT.md","articles":[]},"previous":{"title":"CoOP","level":"2.13","depth":1,"path":"【论文】CoOP.md","ref":"【论文】CoOP.md","articles":[]},"dir":"ltr"},"config":{"plugins":["intopic-toc","expandable-chapters","copy-code-button","flexible-alerts","-lunr","-search","search-pro","mathjax-pro"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"intopic-toc":{"isCollapsed":true,"isScrollspyActive":true,"label":"目录","maxDepth":6,"mode":"nested","selector":".markdown-section h1, .markdown-section h2, .markdown-section h3, .markdown-section h4, .markdown-section h5, .markdown-section h6","visible":true},"search-pro":{},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"mathjax-pro":{"forceSVG":false,"version":"2.7.7"},"flexible-alerts":{"danger":{"className":"danger","icon":"fa fa-ban","label":"CORE CONTENT"},"note":{"className":"info","icon":"fa fa-info-circle","label":"NOTE"},"style":"callout","tip":{"className":"tip","icon":"fa fa-lightbulb-o","label":"TIPS"},"warning":{"className":"warning","icon":"fa fa-exclamation-triangle","label":"SUPPLEMENT"}},"copy-code-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"langaue":"zh-hans","theme":"default","author":"aries-yhf","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"论文笔记","gitbook":"*","description":"论文"},"file":{"path":"【论文】CP-Net.md","mtime":"2022-09-14T06:48:43.514Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-09-17T13:55:53.143Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
